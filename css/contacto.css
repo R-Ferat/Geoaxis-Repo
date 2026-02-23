@@ -1,0 +1,99 @@
+.hero-contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('https://images.unsplash.com/photo-1581090700227-76c83b3b1411?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-contacto h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-contacto p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contacto-seccion {
+  padding: 4rem 0;
+  display: grid;
+  gap: 3rem;
+}
+
+.formulario-contacto {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.boton-primario {
+  padding: 1rem 2rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-primario:hover {
+  background-color: #005fa3;
+}
+
+.contacto-info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contacto-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.contacto-info p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.contacto-info i {
+  margin-right: 0.5rem;
+  color: #0077cc;
+}
+
+@media (max-width: 768px) {
+  .hero-contacto h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-contacto p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,64 @@
+.hero-cursos {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('https://images.unsplash.com/photo-1581093458781-1c54c281e011?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero-cursos h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-cursos p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.curso-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curso-card h3 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.curso-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icono-curso {
+  color: #0077cc;
+}
+
+@media (max-width: 768px) {
+  .hero-cursos h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-cursos p {
+    font-size: 1rem;
+  }
+}

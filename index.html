@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="GeoMagia: soluciones en geomática, topografía digital y SIG en México.">
+    <meta name="keywords" content="Geomática, SIG, Topografía, Cartografía, Agro, Obras, GeoMagia">
+    <meta name="author" content="GeoMagia">
+    <title>GeoMagia - Inicio</title>
+    
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="header">
+    <div class="contenedor">
+        <div class="barra">
+            <h1 class="logo">
+                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
+            </h1>
+            <nav class="navegacion">
+                <a href="#">Inicio</a>
+                <a href="obras.html">Obras</a>
+                <a href="agro.html">Agro</a>
+                <a href="sig.html">SIG</a>
+                <a href="blog2.html">Blog</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </div>
+    <div class="hero">
+        <h1>Expertos en Geomática y Tecnología Geoespacial</h1>
+        <p>Soluciones precisas para Obras, Agricultura y Sistemas SIG.</p>
+    </div>
+</header>
+
+<main class="contenedor">
+    <section aria-label="Áreas de especialización">
+        <h2 class="titulo-seccion">Nuestras Áreas de Especialización</h2>
+        <div class="servicios-grid">
+            <!-- Obras -->
+            <a href="obras.html" class="servicio-card" data-aos="fade-up">
+                <h3>Obras</h3>
+                <p>Inspección, topografía digital y monitoreo estructural para proyectos de construcción e infraestructura.</p>
+            </a>
+            
+            <!-- Agro -->
+            <a href="agro.html" class="servicio-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>Agro</h3>
+                <p>Monitoreo de cultivos, análisis de suelos y gestión de recursos para agricultura y ganadería.</p>
+            </a>
+            
+            <!-- SIG -->
+            <a href="sig.html" class="servicio-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>SIG</h3>
+                <p>Desarrollo de aplicaciones web geoespaciales, dashboards interactivos y automatización de flujos SIG.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Slider de proyectos -->
+<section class="slider-proyectos">
+  <div class="contenedor-slider">
+    <img id="slider-img" src="/img/IMG_4.jpg" alt="Proyecto GeoMagia">
+  </div>
+</section>
+
+<style>
+/* Contenedor general */
+.slider-proyectos {
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  width: 90%; /* deja márgenes laterales */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Imagen dentro del slider */
+.contenedor-slider img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh; /* no ocupa más del 70% de la pantalla */
+  object-fit: contain; /* mantiene proporciones (ideal para vertical y horizontal) */
+  background: #000; /* marco negro alrededor si sobra espacio */
+  transition: opacity 1s ease-in-out;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor-slider img {
+    max-height: 50vh;
+  }
+}
+</style>
+
+<script>
+// Lista de imágenes en la carpeta 'img'
+const imagenes = [
+    "/img/IMG_5.jpg",
+    "/img/IMG_1.JPG",
+    "/img/IMG_3.jpg",
+    "/img/IMG_2.jpg",
+    "/img/IMG_6.jpg",
+    "/img/IMG_5.jpg",
+    "/img/IMG_9.jpg",
+    "/img/IMG_8.jpg",
+    "/img/IMG_10.jpg" 
+];
+
+let index = 0;
+const sliderImg = document.getElementById("slider-img");
+
+function mostrarSiguiente() {
+  index = (index + 1) % imagenes.length;
+  sliderImg.style.opacity = 0; // fade out
+  setTimeout(() => {
+    sliderImg.src = imagenes[index];
+    sliderImg.style.opacity = 1; // fade in
+  }, 500);
+}
+
+// Cambiar imagen cada 5 segundos
+setInterval(mostrarSiguiente, 5000);
+</script>
+
+
+    <section class="cta-section">
+        <h2>¿Listo para empezar tu proyecto?</h2>
+        <p>Contáctanos y descubre cómo podemos apoyarte con tecnología geoespacial avanzada.</p>
+        <a href="contacto.html" class="boton-primario">Contáctanos Ahora</a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-in-out'
+    });
+</script>
+<script src="contador.js"></script>
+</body>
+</html>

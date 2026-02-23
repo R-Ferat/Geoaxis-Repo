@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMagia - Proyectos Geoespaciales</title>
+    <link rel="stylesheet" href="/css/proyectos.css" />
+    <script src="/js/proyectos.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="contenedor">
+        <div class="barra">
+            <h1 class="logo">
+                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
+            </h1>
+            <nav class="navegacion">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Soluciones Geoespaciales Innovadoras</h1>
+            <p>Tecnología de vanguardia para modelado 3D, monitoreo estructural y desarrollo de aplicaciones</p>
+        </div>
+
+<!-- Proyecto 1: Eje Viescas -->
+<h2 class="section-title">Eje Viesca</h2>
+<div class="model-viewer-container">
+    <div class="model-info">
+        <h2>Caracterización del Terreno natural</h2>
+        <p>Como parte del proyecto de instalación de tubería para agua potable, se desarrolló un recorrido virtual utilizando técnicas de fotogrametría.</p>
+        <ul class="project-details">
+            <li><strong>Tecnologías utilizadas:</strong> Drone Fotogramétrico y Receptores GNSS</li>
+            <li><strong>Ubicación:</strong> Coahuila de Zaragoza, México</li>
+            <li><strong>Fecha:</strong> Julio, 2025</li>
+            <li><strong>Resolución:</strong> 4K </li>
+        </ul>
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="volumeControl1">Volumen: <span id="volumeValue1">80%</span></label>
+                <input type="range" min="0" max="100" value="80" class="slider" id="volumeControl1">
+            </div>
+            <div class="control-group">
+                <label for="playbackSpeed1">Velocidad: <span id="speedValue1">1.0x</span></label>
+                <input type="range" min="0.25" max="2" step="0.25" value="1.0" class="slider" id="playbackSpeed1">
+            </div>
+            <button class="action-btn" id="restartVideo1">Reiniciar</button>
+            <button class="action-btn" id="togglePlay1">Pausar</button>
+            <button class="action-btn" id="fullscreenBtn1">Pantalla Completa</button>
+        </div>
+    </div>
+    <div class="model-viewer">
+        <div class="video-container">
+            <video class="project-video" id="video1" muted autoplay playsinline>
+                <source src="https://geomagia.com.mx/modelos3D/EjeViescas_Vuelo45km.mov" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-overlay">
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="video-stats" id="videoStats1">00:00 / 02:45</div>
+            <div class="video-controls">
+                <p>Haz clic en el video para pausar/reproducir</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Proyecto 2: Estadio Olímpico -->
+<h2 class="section-title">Monitoreo Estructural e Inspección</h2>
+<div class="model-viewer-container">
+    <div class="model-info">
+        <h2>Estadio Olímpico Universitario</h2>
+        <p>Recorrido virtual generado mediante escaneo láser y fotogrametría.</p>
+        <ul class="project-details">
+            <li><strong>Tecnologías utilizadas:</strong> Drone, Escáner 3D, Receptores GNSS y Estación Robótica</li>
+            <li><strong>Ubicación:</strong> CDMX, México</li>
+            <li><strong>Fecha:</strong> Agosto 2024</li>
+            <li><strong>Resolución:</strong> 4K </li>
+        </ul>
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="volumeControl2">Volumen: <span id="volumeValue2">80%</span></label>
+                <input type="range" min="0" max="1" step="0.1" value="0.8" class="slider" id="volumeControl2">
+            </div>
+            <div class="control-group">
+                <label for="playbackSpeed2">Velocidad: <span id="speedValue2">1.0x</span></label>
+                <input type="range" min="0.25" max="2" step="0.25" value="1.0" class="slider" id="playbackSpeed2">
+            </div>
+            <button class="action-btn" id="restartVideo2">Reiniciar</button>
+            <button class="action-btn" id="togglePlay2">Pausar</button>
+            <button class="action-btn" id="fullscreenBtn2">Pantalla Completa</button>
+        </div>
+    </div>
+    <div class="model-viewer">
+        <div class="video-container">
+            <video class="project-video" id="video2">
+                <source src="https://geomagia.com.mx/modelos3D/EOU.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-overlay">
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="video-stats" id="videoStats2">00:00 / 02:45</div>
+            <div class="video-controls">
+                <p>Haz clic en el video para pausar/reproducir</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Proyecto 3: Topografía con dron -->
+<h2 class="section-title">Cálculo de Volúmenes</h2>
+<div class="model-viewer-container">
+    <div class="model-info">
+        <h2>Rectificación del Río Nazas</h2>
+        <p>Modelado 3D detallado de parte del río, utilizando técnicas de fotogrametría avanzada y GNSS para
+            la obtención de volumenes por secciones transversales en el terreno.
+        </p>
+        <ul class="project-details">
+            <li><strong>Tecnologías utilizadas:</strong> Receptor GNSS y Fotogrametría con dron</li>
+            <li><strong>Ubicación:</strong> Torreón, Coahuila</li>
+            <li><strong>Fecha:</strong> Julio 2025</li>
+            <li><strong>Resolución:</strong> 4K </li>
+        </ul>
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="volumeControl3">Volumen: <span id="volumeValue3">80%</span></label>
+                <input type="range" min="0" max="1" step="0.1" value="0.8" class="slider" id="volumeControl3">
+            </div>
+            <div class="control-group">
+                <label for="playbackSpeed3">Velocidad: <span id="speedValue3">1.0x</span></label>
+                <input type="range" min="0.25" max="2" step="0.25" value="1.0" class="slider" id="playbackSpeed3">
+            </div>
+            <button class="action-btn" id="restartVideo3">Reiniciar</button>
+            <button class="action-btn" id="togglePlay3">Pausar</button>
+            <button class="action-btn" id="fullscreenBtn3">Pantalla Completa</button>
+        </div>
+    </div>
+    <div class="model-viewer">
+        <div class="video-container">
+            <video class="project-video" id="video3">
+                <source src="https://geomagia.com.mx/modelos3D/PabloRuiz.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-overlay">
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="video-stats" id="videoStats3">00:00 / 03:20</div>
+            <div class="video-controls">
+                <p>Haz clic en el video para pausar/reproducir</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+<!--Proyecto 4:  Mapas Automáticos -->
+        <h2 class="section-title">Desarrollo WEB SIG</h2>
+        
+        <div class="app-container">
+            <div class="app-info">
+                <h2>QuickMap</h2>
+                <p>Nuestra aplicación permite realizar cartografía temática, de forma ejecutiva y intuitiva. Pensada para personal que no está familiarizado con 
+                    herramientas cartográficas como QGIS
+                </p>
+                
+                <div class="feature-list">
+                    <div class="feature-card">
+                        <h4><i>📱</i> Accesivilidad </h4>
+                        <p>Distintos usuarios pueden obtener sus propios mapas desde distintos dispositivos</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><i>📐</i>Ventaja por estilo</h4>
+                        <p>Todos los usuarios están normados por los estilos cartográficos que permite la aplicación</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><i>🌐</i>Escalabilidad</h4>
+                        <p>Proyectopersonalizable y editable, pues es totalmente OS.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <h3>Disponible para:</h3>
+                    <div style="display: flex; gap: 15px; margin-top: 15px;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px;">
+                             windows
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 8px;">
+                             Linux
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-viewer">
+                <img src="https://geomagia.com.mx/modelos3D/quickmap.png" 
+                     alt="GeoMagia App" class="app-image">
+                <div class="app-button-container">
+                    <a href="http://66.179.211.238:5000/" class="action-btn" target="_blank">Ver Aplicación</a>
+                    <a href="#" class="action-btn" style="background: #2ecc71;" target="_blank">Descargar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Proyecto 5: Canal de Sacramento -->
+<h2 class="section-title">Vuelo Fotogramétrico con Dron</h2>
+
+<div class="model-viewer-container">
+    <div class="model-info">
+        <h2>Canal de Sacramento</h2>
+        <p>En este proyecto se realizó el vuelo fotogramétrico para la obtención pronta de topografía y niveles de proyecto
+            en las áreas de inundación detectadas. Se utilizó dron RTK y levantamiento GNSS en los puntos de interés.
+        </p>
+        <ul class="project-details">
+            <li><strong>Tecnologías utilizadas:</strong> Receptor GNSS y Fotogrametría con dron</li>
+            <li><strong>Ubicación:</strong> Gómez Palacio, Durango</li>
+            <li><strong>Fecha:</strong> Agosto 2025</li>
+            <li><strong>Resolución:</strong> 4K</li>
+        </ul>
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="volumeControl4">Volumen: <span id="volumeValue4">80%</span></label>
+                <input type="range" min="0" max="100" value="80" class="slider" id="volumeControl4">
+            </div>
+            <div class="control-group">
+                <label for="playbackSpeed4">Velocidad: <span id="speedValue4">1.0x</span></label>
+                <input type="range" min="0.25" max="2" step="0.25" value="1.0" class="slider" id="playbackSpeed4">
+            </div>
+            <button class="action-btn" id="restartVideo4">Reiniciar</button>
+            <button class="action-btn" id="togglePlay4">Pausar</button>
+            <button class="action-btn" id="fullscreenBtn4">Pantalla Completa</button>
+        </div>
+    </div>
+
+    <div class="model-viewer">
+        <div class="video-container">
+            <video class="project-video" id="video4" muted autoplay playsinline>
+                <source src="https://geomagia.com.mx/modelos3D/CSM_FUSION_CORRIDOR.mov" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-overlay">
+                <button class="play-btn">▶</button>
+            </div>
+            <div class="video-stats" id="videoStats4">00:00 / 03:20</div>
+            <div class="video-controls">
+                <p>Haz clic en el video para pausar/reproducir</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2023 GeoMagia | Soluciones Geoespaciales Avanzadas</p>
+        <p>Nuestros Antecedentes</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoMagia - Blog</title>
+  <meta name="description" content="Artículos, noticias y reflexiones sobre geomática, SIG y geociencias">
+  <meta name="author" content="GeoMagia">
+
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor">
+    <div class="barra">
+       <h1 class="logo">
+                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
+            </h1>
+      <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="obras.html">Obras</a>
+                <a href="agro.html">Agro</a>
+                <a href="sig.html">SIG</a>
+                <a href="blog2.html">Blog</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero-blog" data-aos="fade-in">
+    <h1>Blog GeoMagia</h1>
+    <p>Reflexiones, experiencias y conocimiento geoespacial compartido</p>
+  </div>
+</header>
+
+<main class="contenedor blog-lista">
+  <h2 class="titulo-seccion">Últimas Publicaciones</h2>
+
+  <div class="entrada-blog" data-aos="fade-up">
+    <img src="https://images.unsplash.com/photo-1581091215367-59f72963cd1d?auto=format&fit=crop&w=800&q=80" alt="blog img">
+    <div class="contenido-blog">
+      <h3>¿Qué es la geomática?</h3>
+      <p>Una introducción a esta disciplina que integra la tecnología y el análisis espacial. Desde GNSS hasta SIG: lo que necesitas saber.</p>
+      <a href="entrada1.html" class="boton-primario">Leer más</a>
+    </div>
+  </div>
+
+  <div class="entrada-blog" data-aos="fade-up" data-aos-delay="100">
+    <img src="https://images.unsplash.com/photo-1580715913453-d5f7f6388e31?auto=format&fit=crop&w=800&q=80" alt="blog img">
+    <div class="contenido-blog">
+      <h3>Topografía moderna con drones</h3>
+      <p>Explora cómo los RPAS están revolucionando la manera en que hacemos levantamientos topográficos en zonas urbanas y rurales.</p>
+      <a href="entrada2.html" class="boton-primario">Leer más</a>
+    </div>
+  </div>
+
+  <!-- Más entradas aquí -->
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-in-out'
+  });
+</script>
+</body>
+</html>

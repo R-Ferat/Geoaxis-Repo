@@ -1,0 +1,579 @@
+
+/* proyectos.css — fusión del <style> embebido + archivo externo */
+
+/* ============================
+   Estilos originales (embebidos)
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #3498db;
+}
+.logo-link {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Mantiene el color original del logo */
+    display: inline-block; /* Mantiene el comportamiento de bloque inline */
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 3rem 0 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+.model-viewer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.model-info {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.model-info h2 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.project-details {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.project-details li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-details li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.model-viewer {
+    flex: 2;
+    min-width: 300px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-overlay:hover {
+    opacity: 1;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.controls-panel {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.slider {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    border-radius: 3px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+}
+
+.action-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.play-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.play-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.video-stats {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+/* Nueva sección para la app */
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.app-info {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-viewer {
+    flex: 2;
+    min-width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.app-image {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.app-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background: rgba(52, 152, 219, 0.15);
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(52, 152, 219, 0.25);
+}
+
+.feature-card h4 {
+    color: #3498db;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.feature-card h4 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .model-viewer-container,
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .model-info, .app-info {
+        order: -1;
+    }
+    
+    .model-viewer, .app-viewer {
+        height: 400px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================
+   Estilos externos provistos
+   (archivo antiguo que mostrastes)
+   ============================ */
+
+/* Estilos específicos para la página de proyectos */
+/* Estilos generales del contenedor */
+.proyectos-detalle {
+    padding: 4rem 0;
+}
+
+.proyecto-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.proyecto-detalle:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Texto del proyecto */
+.proyecto-texto {
+    flex: 1;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.proyecto-texto h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.proyecto-texto p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.proyecto-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.proyecto-info li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.proyecto-info strong {
+    color: #000;
+}
+
+/* Imagen del proyecto */
+.proyecto-imagen {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+/* Botón */
+.boton-primario {
+    display: inline-block;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.boton-primario:hover {
+    background-color: #005fa3;
+}
+
+/* Hero Section específica */
+.hero-servicios {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1591696205602-2f950c417cb3?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-servicios h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-servicios p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .proyecto-detalle {
+        flex-direction: column;
+    }
+
+    .proyecto-texto,
+    .proyecto-imagen {
+        width: 100%;
+    }
+
+    .hero-servicios h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-servicios p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Contenedor de barra */
+.barra {
+    display: flex;
+    align-items: center;       /* Centra verticalmente */
+    justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
+    flex-wrap: wrap;           /* Para que sea responsive en pantallas pequeñas */
+    padding: 10px 0;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: #f1c40f; /* O el color que quieras para resaltar */
+}
+
+/* Responsivo: en pantallas pequeñas se apila */
+@media (max-width: 768px) {
+    .barra {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navegacion {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+}

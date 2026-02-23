@@ -1,0 +1,165 @@
+/* ================================
+   Agro & Medio Ambiente Styles
+   ================================ */
+
+/* Variables de color */
+:root {
+  --verde-oscuro: #1b4332;
+  --verde-medio: #2d6a4f;
+  --verde-claro: #95d5b2;
+  --blanco: #ffffff;
+  --gris-claro: #f4f4f4;
+  --gris-texto: #e9ecef;
+  --negro: #0d0d0d;
+}
+
+/* --------- Header --------- */
+.agro-header {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+}
+
+.agro-header .logo span {
+  color: var(--verde-claro);
+}
+
+.agro-header .navegacion a {
+  color: var(--gris-texto);
+  transition: color 0.3s;
+}
+
+.agro-header .navegacion a:hover,
+.agro-header .navegacion a.activo {
+  color: var(--verde-claro);
+  font-weight: 600;
+}
+
+
+/* --------- Hero --------- */
+.agro-hero {
+  background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)),
+              url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: var(--blanco);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.agro-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.agro-hero p {
+  font-size: 1.2rem;
+  color: var(--gris-texto);
+}
+
+/* --------- Detalle de servicios --------- */
+.servicios-detalle {
+  margin: 4rem auto;
+  max-width: 1200px;
+}
+
+.servicio-detalle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gris-claro);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.servicio-texto {
+  padding: 2rem;
+}
+
+.servicio-texto h3 {
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+.servicio-texto p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.servicio-caracteristicas h4 {
+  margin-bottom: 1rem;
+  color: var(--verde-medio);
+}
+
+.caracteristicas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.caracteristica {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.caracteristica i {
+  font-size: 1.5rem;
+  color: var(--verde-medio);
+}
+
+.caracteristica h5 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+}
+
+.servicio-imagen {
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* --------- Botones --------- */
+.boton-primario {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.boton-primario:hover {
+  background: var(--verde-medio);
+}
+
+/* --------- CTA --------- */
+.agro-cta {
+  background: var(--verde-medio);
+  color: var(--blanco);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.agro-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.agro-cta p {
+  margin-bottom: 2rem;
+  color: var(--gris-texto);
+}
+
+/* --------- Footer --------- */
+.agro-footer {
+  background: var(--verde-oscuro);
+  color: var(--gris-texto);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}

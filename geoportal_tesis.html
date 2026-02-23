@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPortal - GeoMagia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to right, #3a6073, #16222a);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .barra {
+            background-color: #111;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo__nombre {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .logo__bold {
+            font-weight: bold;
+            color: #1abc9c;
+        }
+
+        .navegacion {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navegacion__enlace {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navegacion__enlace:hover {
+            color: #1abc9c;
+        }
+
+        .contenido {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .contenido h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #1abc9c;
+        }
+
+        .contenido p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #111;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="barra">
+        <a class="logo" href="index.html">
+            <h1 class="logo__nombre no-margin">Geo<span class="logo__bold">Magia</span></h1>
+        </a>
+        <nav class="navegacion">
+            <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+            <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            <a href="geoportal_tesis.html" class="navegacion__enlace">GeoPortal</a>
+        </nav>
+    </div>
+
+    <main class="contenido">
+        <h2>GeoPortal en Construcción</h2>
+        <p>Estamos preparando una experiencia interactiva única para que explores mapas, datos geoespaciales y mucho más. ¡Muy pronto estará disponible!</p>
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 GeoMagia. Todos los derechos reservados: rodrigo ferat.
+    </footer>
+</body>
+</html>
