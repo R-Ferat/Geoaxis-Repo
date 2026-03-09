@@ -1,0 +1,47 @@
+// REGISTRO DE FUENTES (Rutas corregidas para Codespaces)
+/* --- SKYROX (Títulos de impacto) --- */
+@font-face {
+  font-family: 'Skyrox';
+  src: url('../fonts/Skyrox-MediumCondensed.otf') format('opentype');
+}
+
+/* --- GOTHAM FAMILY (Tus 5 estilos de Gotham) --- */
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.otf') format('opentype');
+  font-weight: 700; // Bold
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.otf') format('opentype');
+  font-weight: 500; // Medium
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham Book Font.otf') format('opentype');
+  font-weight: 400; // Normal/Book
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-UltraIta.otf') format('opentype');
+  font-weight: 900; // Ultra Pesada
+  font-style: italic;
+}
+// VARIABLES DE IDENTIDAD (Manual Geoaxis)
+$lima: #D4FF00;      // Verde Eléctrico (Innovación)
+$azul-dark: #0B132B; // Azul Profundo (Precisión)
+$blanco: #F5F5F1;    // Blanco Hueso (Fondo)
+
+// ASIGNACIÓN DE TIPOGRAFÍA
+$font-header: 'Skyrox', sans-serif; // Para Títulos impactantes
+$font-body: 'Gotham', sans-serif;   // Para lectura y subtítulos

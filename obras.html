@@ -1,241 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Servicios profesionales de geomática, topografía digital y SIG en México.">
-    <meta name="keywords" content="servicios geomática, SIG profesional, topografía digital, cursos SIG, cartografía">
-    <meta name="author" content="GeoMagia">
-    <title>GeoMagia - Nuestros Servicios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoaxis | Ingeniería y Topografía de Precisión</title>
     
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/obras.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
-<header class="header">
-    <div class="contenedor">
-        <div class="barra">
-            <h1 class="logo">
-                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
-            </h1>
-            <nav class="navegacion">
-                <a href="index.html">Inicio</a>
-                <a href="obras.html">Obras</a>
-                <a href="agro.html">Agro</a>
-                <a href="sig.html">SIG</a>
-                <a href="blog2.html">Blog</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+<body class="page-obras">
+
+    <nav class="hud-menu">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/geoaxis/MONOGRAMA VERDE ELECTRICO.png" alt="Geoaxis Home" class="mini-logo">
+            </a>
         </div>
-    </div>
-</header>
+        <ul class="nav-links">
+            <li><a href="index.html#agro"><i class="fa-solid fa-seedling"></i> <span>AGRO ANÁLISIS</span></a></li>
+            <li><a href="index.html#nosotros"><i class="fa-solid fa-circle-info"></i> <span>NOSOTROS</span></a></li>
+            <li><a href="obras.html"><i class="fa-solid fa-microscope"></i> <span>TOPOGRAFÍA</span></a></li>
+            <li><a href="index.html#sig"><i class="fa-solid fa-map-location-dot"></i> <span>APLICACIONES SIG</span></a></li>
+            <li><a href="index.html#dron"><i class="fa-solid fa-eye"></i> <span>VIGILANCIA DRON</span></a></li>
+            <li><a href="index.html#blog"><i class="fa-solid fa-newspaper"></i> <span>BLOG GEOMÁTICA</span></a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-envelope-open-text"></i> <span>CONTACTO</span></a></li>
+        </ul>
 
-<div class="hero-servicios" data-aos="fade-in">
-    <h1>Nuestros Servicios Profesionales</h1>
-    <p>Soluciones tecnológicas avanzadas para tus desafíos geoespaciales</p>
-</div>
+        <div class="hud-bottom">
+            <div class="hud-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="#" class="btn-portal">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>PORTAL DE DATOS</span>
+            </a>
+        </div>
+    </nav>
 
-<main class="contenedor servicios-detalle">
-    <section aria-label="Detalle de servicios">
-        <div class="servicio-detalle" data-aos="fade-right">
-            <div class="servicio-texto">
-                <h3>Inspección de Obras</h3>
-                <p>Realizamos inspecciones técnicas avanzadas de obras civiles mediante tecnología geodésica de última generación. Nuestros servicios garantizan el control estructural, prevención de riesgos y cumplimiento de normativas en proyectos de construcción.</p>
-                
-                <div class="servicio-caracteristicas">
-                    <h4>Tecnologías utilizadas:</h4>
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica">
-                            <i class="fas fa-ruler-combined"></i>
-                            <div>
-                                <h5>Estaciones totales</h5>
-                                <p>Precisión milimétrica en mediciones</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <i class="fas fa-wave-square"></i>
-                            <div>
-                                <h5>Nivelaciones</h5>
-                                <p>Control exacto de altimetría</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <span class="icon-combo">
-                                <i class="fas fa-cube"></i>
-                                    <i class="fas fa-ruler" style="font-size: 0.8em; position: relative; top: -5px; left: -15px;"></i>
-                            </span>
-                            <div>
-                                <h5>Escáner 3D y Drones</h5>
-                                <p>Modelado completo de estructuras</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <i class="fas fa-satellite"></i>
-                            <div>
-                                <h5>Monitoreo GNSS</h5>
-                                <p>Seguimiento continuo de movimientos</p>
-                            </div>
-                        </div>
+    <main class="main-content">
+        
+        <header class="hero-section" style="background-image: linear-gradient(to right, rgba(11, 19, 43, 0.9) 20%, rgba(11, 19, 43, 0.4) 50%, transparent 100%), url('img/Topo/IMG_5968.jpg');">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="font-skyrox text-white">INGENIERÍA Y <br><span class="text-lima">TOPOGRAFÍA</span></h1>
+                <p class="font-gotham text-white">Control métrico y supervisión técnica de alta precisión mediante Estación Total, GNSS RTK y Fotogrametría.</p>
+                <div class="hero-btns">
+                    <a href="#proyectos" class="btn-geo">VER PROYECTOS</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="container py-5">
+            <h2 class="font-skyrox text-center mb-5">EQUIPAMIENTO <span class="text-lima">PROFESIONAL</span></h2>
+            <div class="arsenal-grid">
+                <div class="arsenal-card" data-aos="flip-left">
+                    <div class="card-bg" style="background-image: url('img/Topo/IMG_5968.jpg');"></div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-tower-observation"></i>
+                        <h4 class="font-skyrox">ESTACIÓN TOTAL</h4>
+                        <p>Precisión angular para trazo de ejes y control estructural.</p>
                     </div>
                 </div>
-                
-                <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-            </div>
-            <div class="servicio-imagen" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
-        </div>
-        
 
-        
-        <div class="servicio-detalle" data-aos="fade-right">
-            <div class="servicio-texto">
-                <h3>Topografía Digital</h3>
-                <p>Levantamientos topográficos de precisión utilizando tecnología GNSS de alta exactitud, drones profesionales y estaciones totales robotizadas. Generamos modelos digitales del terreno, planos de curvas de nivel y documentación técnica integral.</p>
-                
-                <div class="servicio-caracteristicas">
-                    <h4>Aplicaciones:</h4>
-                    <div class="caracteristicas-grid">
-                        <div class="caracteristica">
-                            <i class="fas fa-drafting-compass"></i>
-                            <div>
-                                <h5>Límites de propiedad</h5>
-                                <p>Deslindes y amojonamientos</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <i class="fas fa-road"></i>
-                            <div>
-                                <h5>Infraestructura vial</h5>
-                                <p>Trazo y replanteo de obras</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <div>
-                                <h5>Modelos de precisión</h5>
-                                <p>MDT y MDS para ingeniería</p>
-                            </div>
-                        </div>
-                        <div class="caracteristica">
-                            <i class="fas fa-water"></i>
-                            <div>
-                                <h5>Hidrología</h5>
-                                <p>Cuencas y redes de drenaje</p>
-                            </div>
-                        </div>
+                <div class="arsenal-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-bg" style="background-image: url('img/Topo/IMG_5967.jpg');"></div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-satellite"></i>
+                        <h4 class="font-skyrox">GNSS RTK</h4>
+                        <p>Georreferenciación centimétrica vinculada a la RGNA de INEGI.</p>
                     </div>
                 </div>
-                
-                <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-            </div>
-            <div class="servicio-imagen" style="background-image: url('https://storage.googleapis.com/d_images/ServiceImage/4613/441/shutterstock_1560102356_2.jpg');"></div>
-        
 
-        </div>
-    </section>
-</main>
-
-<section class="proceso-servicio">
-    <div class="contenedor">
-        <h2 class="titulo-seccion">Nuestro Proceso de Trabajo</h2>
-        <p>Cada proyecto se gestiona con metodologías probadas que garantizan resultados de calidad</p>
-        
-        <div class="proceso-grid">
-            <div class="paso-proceso" data-aos="fade-up">
-                <div class="numero-paso">1</div>
-                <h4>Consulta Inicial</h4>
-                <p>Análisis de necesidades y objetivos del proyecto</p>
-            </div>
-            
-            <div class="paso-proceso" data-aos="fade-up" data-aos-delay="100">
-                <div class="numero-paso">2</div>
-                <h4>Planificación Técnica</h4>
-                <p>Diseño de metodología y selección de tecnologías</p>
-            </div>
-            
-            <div class="paso-proceso" data-aos="fade-up" data-aos-delay="200">
-                <div class="numero-paso">3</div>
-                <h4>Trabajo de Campo</h4>
-                <p>Recolección de datos con equipos de precisión</p>
-            </div>
-            
-            <div class="paso-proceso" data-aos="fade-up" data-aos-delay="300">
-                <div class="numero-paso">4</div>
-                <h4>Procesamiento</h4>
-                <p>Análisis y modelado con software especializado</p>
-            </div>
-            
-            <div class="paso-proceso" data-aos="fade-up" data-aos-delay="400">
-                <div class="numero-paso">5</div>
-                <h4>Entrega de Resultados</h4>
-                <p>Informes técnicos, visualizaciones y datos geoespaciales</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="testimonios">
-    <div class="contenedor">
-        <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
-        
-        <div class="testimonio-contenedor">
-            <div class="testimonio" data-aos="fade-right">
-                <p>"GeoMagia realizó un levantamiento topográfico para nuestro proyecto de infraestructura con una precisión excepcional. Su equipo profesional y los resultados obtenidos superaron nuestras expectativas."</p>
-                <div class="cliente">
-                    <div class="cliente-avatar">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho">
+                <div class="arsenal-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-bg" style="background-image: url('img/Topo/IMG_6077.jpg');"></div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-drone"></i>
+                        <h4 class="font-skyrox">DRONES TÁCTICOS</h4>
+                        <p>Mapeo aéreo masivo y generación de nubes de puntos 3D.</p>
                     </div>
-                    <div class="info-cliente">
-                        <h4>Ing. Rodrigo Mendoza</h4>
-                        <p>Director de Proyectos, Constructora Horizonte</p>
+                </div>
+
+                <div class="arsenal-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card-bg" style="background-image: url('img/Topo/IMG_5995.jpg');"></div>
+                    <div class="card-content">
+                        <i class="fa-solid fa-level-up-alt"></i>
+                        <h4 class="font-skyrox">NIVELACIÓN FIJA</h4>
+                        <p>Control vertical estricto para terracerías y drenajes pluviales.</p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="proyectos" class="container py-5">
+            <h2 class="font-skyrox mb-5">PROYECTOS <span class="text-lima">DESTACADOS</span></h2>
             
-            <div class="testimonio" data-aos="fade-left">
-                <p>"Los cursos de SIG que ofrece GeoMagia son los mejores que he tomado. Los instructores tienen conocimiento profundo y las prácticas con casos reales fueron fundamentales para aplicar lo aprendido en mi trabajo."</p>
-                <div class="cliente">
-                    <div class="cliente-avatar">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente satisfecho">
+            <div class="project-case" data-aos="fade-up">
+                <div class="project-visual">
+                    <div class="video-container shadow-neon">
+                        <video autoplay muted loop playsinline class="video-pointcloud">
+                            <source src="videos/topo/csm_nube_compare.mp4" type="video/mp4">
+                            Tu navegador no soporta video.
+                        </video>
+                        <span class="badge-tech"><i class="fa-solid fa-cloud"></i> NUBE DE PUNTOS 3D</span>
                     </div>
-                    <div class="info-cliente">
-                        <h4>Dra. Laura Sánchez</h4>
-                        <p>Investigadora, Instituto de Ecología</p>
+                </div>
+                <div class="project-info">
+                    <span class="tag-lima">OBRA HIDRÁULICA | CONAGUA</span>
+                    <h3 class="font-skyrox text-white">CANAL DE SACRAMENTO</h3>
+                    <p class="font-gotham text-white">Colaboración estratégica con <strong>SIIAO</strong> para la remodelación en Gómez Palacio, Dgo. Control métrico integral para preliminares.</p>
+                    <ul class="specs-list font-gotham text-white">
+                        <li><i class="fa-solid fa-satellite-dish text-lima"></i> Control GNSS de alta precisión</li>
+                        <li><i class="fa-solid fa-drone text-lima"></i> Fotogrametría aérea</li>
+                        <li><i class="fa-solid fa-ruler-combined text-lima"></i> Secciones transversales de canal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-case reverse" data-aos="fade-up">
+                <div class="project-visual">
+                    <div class="video-container shadow-neon">
+                        <video autoplay muted loop playsinline class="video-pointcloud">
+                            <source src="videos/topo/VOLUMENES_EXAMPLE.mp4" type="video/mp4">
+                            Tu navegador no soporta video.
+                        </video>
+                        <div class="accuracy-tag font-skyrox">Precisión: +/- 2cm</div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="tag-lima">EXTRACCIÓN Y MINERÍA</span>
+                    <h3 class="font-skyrox text-white">GESTIÓN DE VOLÚMENES</h3>
+                    <p class="font-gotham text-white">Determinación de inventarios en bancos de material. Datos vinculados a la <strong>Red Geodésica Nacional Activa de INEGI</strong> para trazabilidad legal y técnica.</p>
+                    <div class="workflow-steps">
+                        <div class="step"><i class="fa-solid fa-location-dot"></i><span>BN INEGI</span></div>
+                        <div class="step"><i class="fa-solid fa-plane-up"></i><span>Barrido Dron</span></div>
+                        <div class="step"><i class="fa-solid fa-calculator"></i><span>Cálculo m³</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="cta-section">
-    <div class="contenedor">
-        <h2>¿Listo para transformar tus proyectos con tecnología geoespacial?</h2>
-        <p>Contáctanos para una consultoría gratuita y descubre cómo podemos ayudarte</p>
-        <a href="contacto.html" class="boton-primario">Solicitar Consulta</a>
-    </div>
-</section>
+        <section class="entregables-section container py-5">
+            <h2 class="font-skyrox text-center mb-5">DATOS DE <span class="text-lima">ALTA PRECISIÓN</span></h2>
+            <div class="entregables-grid">
+                <div class="entregable-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-braille"></i></div>
+                    <h4 class="font-skyrox text-white">Nube de Puntos</h4>
+                    <p class="text-white font-gotham">Millones de puntos XYZ con color real para gemelos digitales y modelos BIM.</p>
+                    <div class="software-tags">
+                        <span class="tag">LAS / LAZ</span>
+                        <span class="tag">PointCab</span>
+                        <span class="tag">Revit</span>
+                    </div>
+                </div>
 
-<footer class="footer">
-    <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
-</footer>
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h4 class="font-skyrox text-white">Ortomosaico HD</h4>
+                    <p class="text-white font-gotham">Mapas métricos con resolución de hasta 2cm/pixel para inspección y trazo.</p>
+                    <div class="software-tags">
+                        <span class="tag">GeoTIFF</span>
+                        <span class="tag">QGIS</span>
+                        <span class="tag">Global Mapper</span>
+                    </div>
+                </div>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-        easing: 'ease-in-out'
-    });
-</script>
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-vector-square"></i></div>
+                    <h4 class="font-skyrox text-white">Curvas de Nivel</h4>
+                    <p class="text-white font-gotham">Vectores optimizados y suavizados listos para diseño de terracerías y vialidades.</p>
+                    <div class="software-tags">
+                        <span class="tag">DWG / DXF</span>
+                        <span class="tag">Civil 3D</span>
+                        <span class="tag">Carlson</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparativa-tecnica container py-5" data-aos="fade-up">
+            <div class="comparativa-wrapper shadow-neon">
+                <h3 class="font-skyrox text-center text-white mb-4">¿POR QUÉ ELEGIR <span class="text-lima">GEOAXIS</span>?</h3>
+                <div class="table-responsive">
+                    <table class="table-geoaxis">
+                        <thead>
+                            <tr>
+                                <th class="font-skyrox">MÉTRICA</th>
+                                <th class="font-skyrox">TOPOGRAFÍA CONVENCIONAL</th>
+                                <th class="font-skyrox text-lima">SISTEMA HÍBRIDO GEOAXIS</th>
+                            </tr>
+                        </thead>
+                        <tbody class="font-gotham text-white">
+                            <tr>
+                                <td>Densidad de Datos</td>
+                                <td>50 - 200 puntos</td>
+                                <td class="text-lima">+2,000,000 de puntos por Ha</td>
+                            </tr>
+                            <tr>
+                                <td>Tiempo en Campo</td>
+                                <td>Días / Semanas</td>
+                                <td class="text-lima">Minutos / Horas</td>
+                            </tr>
+                            <tr>
+                                <td>Georreferenciación</td>
+                                <td>Local / Estimada</td>
+                                <td class="text-lima">RGNA de INEGI (Absoluta)</td>
+                            </tr>
+                            <tr>
+                                <td>Seguridad</td>
+                                <td>Personal en riesgo</td>
+                                <td class="text-lima">Operación remota segura</td>
+                            </tr>
+                            <tr>
+                                <td>Entregables</td>
+                                <td>Planos 2D básicos</td>
+                                <td class="text-lima">Modelos 3D y Ortofotos HD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section container py-5">
+            <h2 class="font-skyrox text-center mb-5">SOCIOS <span class="text-lima">ESTRATÉGICOS</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-white font-gotham">"Geoaxis optimizó nuestros inventarios de extracción con una precisión que no habíamos logrado antes."</p>
+                    <div class="client-meta">
+                        <span class="client-name font-skyrox text-white">ING. RICARDO T.</span>
+                        <span class="client-company text-lima">PLANTA DE AGREGADOS</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-white font-gotham">"La integración de drones en nuestra obra lineal permitió detectar interferencias antes de la construcción."</p>
+                    <div class="client-meta">
+                        <span class="client-name font-skyrox text-white">ARQ. SOFÍA M.</span>
+                        <span class="client-company text-lima">CONSTRUCTORA GLOBAL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>

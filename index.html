@@ -3,154 +3,141 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="GeoMagia: soluciones en geomática, topografía digital y SIG en México.">
-    <meta name="keywords" content="Geomática, SIG, Topografía, Cartografía, Agro, Obras, GeoMagia">
-    <meta name="author" content="GeoMagia">
-    <title>GeoMagia - Inicio</title>
+    <meta name="description" content="Geoaxis: Innovación con Precisión. Soluciones avanzadas en LiDAR, SIG y Agro Análisis.">
+    <meta name="author" content="Geoaxis">
+    <title>Geoaxis - Innovación con Precisión</title>
     
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="css/main.css" /> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="tech-theme">
 
-<header class="header">
-    <div class="contenedor">
-        <div class="barra">
-            <h1 class="logo">
-                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
-            </h1>
-            <nav class="navegacion">
-                <a href="#">Inicio</a>
-                <a href="obras.html">Obras</a>
-                <a href="agro.html">Agro</a>
-                <a href="sig.html">SIG</a>
-                <a href="blog2.html">Blog</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-        </div>
-    </div>
-    <div class="hero">
-        <h1>Expertos en Geomática y Tecnología Geoespacial</h1>
-        <p>Soluciones precisas para Obras, Agricultura y Sistemas SIG.</p>
-    </div>
-</header>
-
-<main class="contenedor">
-    <section aria-label="Áreas de especialización">
-        <h2 class="titulo-seccion">Nuestras Áreas de Especialización</h2>
-        <div class="servicios-grid">
-            <!-- Obras -->
-            <a href="obras.html" class="servicio-card" data-aos="fade-up">
-                <h3>Obras</h3>
-                <p>Inspección, topografía digital y monitoreo estructural para proyectos de construcción e infraestructura.</p>
-            </a>
-            
-            <!-- Agro -->
-            <a href="agro.html" class="servicio-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>Agro</h3>
-                <p>Monitoreo de cultivos, análisis de suelos y gestión de recursos para agricultura y ganadería.</p>
-            </a>
-            
-            <!-- SIG -->
-            <a href="sig.html" class="servicio-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>SIG</h3>
-                <p>Desarrollo de aplicaciones web geoespaciales, dashboards interactivos y automatización de flujos SIG.</p>
+<nav class="hud-menu">
+    <div class="axis-line"></div>
+        <div class="logo-container">
+             <a href="index.html">
+                <img src="img/geoaxis/MONOGRAMA VERDE ELECTRICO.png" alt="Geoaxis Home" class="mini-logo">
             </a>
         </div>
-    </section>
+    
+    <ul class="nav-links">
+        <li><a href="#agro"><i class="fa-solid fa-seedling"></i> <span>AGRO ANÁLISIS</span></a></li>
+        <li><a href="#nosotros"><i class="fa-solid fa-circle-info"></i> <span>NOSOTROS</span></a></li>
+        <li><a href="obras.html"><i class="fa-solid fa-microscope"></i> <span>TOPOGRAFÍA</span></a></li>
+        <li><a href="#sig"><i class="fa-solid fa-map-location-dot"></i> <span>APLICACIONES SIG</span></a></li>
+        <li><a href="#dron"><i class="fa-solid fa-eye"></i> <span>VIGILANCIA DRON</span></a></li>
+        <li><a href="#blog"><i class="fa-solid fa-newspaper"></i> <span>BLOG GEOMÁTICA</span></a></li>
+        <li><a href="#contacto"><i class="fa-solid fa-envelope-open-text"></i> <span>CONTACTO</span></a></li>
+    </ul>
 
-    <!-- Slider de proyectos -->
-<section class="slider-proyectos">
-  <div class="contenedor-slider">
-    <img id="slider-img" src="/img/IMG_4.jpg" alt="Proyecto GeoMagia">
-  </div>
-</section>
+    <div class="hud-bottom">
+        <div class="hud-socials">
+            <a href="https://instagram.com/tu-perfil" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/tu-perfil" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
 
-<style>
-/* Contenedor general */
-.slider-proyectos {
-  margin: 2rem auto;
-  text-align: center;
-  position: relative;
-  max-width: 100%;
-  width: 90%; /* deja márgenes laterales */
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+        <a href="#" class="btn-portal">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span>PORTAL DE DATOS</span>
+        </a>
+    </div>
+</nav>
 
-/* Imagen dentro del slider */
-.contenedor-slider img {
-  width: 100%;
-  height: auto;
-  max-height: 70vh; /* no ocupa más del 70% de la pantalla */
-  object-fit: contain; /* mantiene proporciones (ideal para vertical y horizontal) */
-  background: #000; /* marco negro alrededor si sobra espacio */
-  transition: opacity 1s ease-in-out;
-}
+    <main class="main-content">
+        
+        <header class="hero-section" style="background-image: linear-gradient(rgba(11, 19, 43, 0.7), rgba(11, 19, 43, 0.7)), url('img/geoaxis/PUBLICACION-2.jpg');">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="font-skyrox">INNOVACIÓN <br><span class="text-lima">CON PRECISIÓN</span></h1>
+                <p class="font-gotham">Geoaxis: Transformando la captura de datos geoespaciales en decisiones estratégicas de alta precisión.</p>
+                <div class="hero-btns">
+                    <a href="#topografia" class="btn-geo">EXPLORAR SOLUCIONES</a>
+                </div>
+            </div>
+        </header>
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .contenedor-slider img {
-    max-height: 50vh;
-  }
-}
-</style>
+        <section class="bento-container">
+            <h2 class="section-title font-skyrox" data-aos="fade-up">Ecosistema Tecnológico</h2>
+            
+            <div class="bento-grid">
+                <div class="bento-item item-large" data-aos="zoom-in">
+                    <div class="bento-tag"><i class="fa-solid fa-cube"></i> LIVE VIEW LiDAR</div>
+                    <iframe src="https://geomagia.com.mx/potree/examples/multiple_pointclouds.html" frameborder="0" class="potree-iframe"></iframe>
+                </div>
 
-<script>
-// Lista de imágenes en la carpeta 'img'
-const imagenes = [
-    "/img/IMG_5.jpg",
-    "/img/IMG_1.JPG",
-    "/img/IMG_3.jpg",
-    "/img/IMG_2.jpg",
-    "/img/IMG_6.jpg",
-    "/img/IMG_5.jpg",
-    "/img/IMG_9.jpg",
-    "/img/IMG_8.jpg",
-    "/img/IMG_10.jpg" 
-];
+                <div class="bento-item item-wide bg-pub-2" style="background-image: url('img/agro_img/NDVI_MAPA_XOCH191125.png');" data-aos="fade-up">
+                    <div class="bento-content">
+                        <h3 class="font-skyrox">AGRO ANÁLISIS</h3>
+                        <p class="font-gotham">Salud de cultivos y gestión de precisión.</p>
+                    </div>
+                </div>
 
-let index = 0;
-const sliderImg = document.getElementById("slider-img");
+                <div class="bento-item item-tall bg-pub-3" style="background-image: url('img/Vig_dron/imagen_detec_personas_1.png');" data-aos="fade-left">
+                    <div class="bento-content">
+                        <h3 class="font-skyrox">VIGILANCIA CON DRON</h3>
+                        <p class="font-gotham">Monitoreo táctico y detección de activos.</p>
+                    </div>
+                </div>
 
-function mostrarSiguiente() {
-  index = (index + 1) % imagenes.length;
-  sliderImg.style.opacity = 0; // fade out
-  setTimeout(() => {
-    sliderImg.src = imagenes[index];
-    sliderImg.style.opacity = 1; // fade in
-  }, 500);
-}
+                <div class="bento-item item-medium glass-effect" style="background-image: url('img/app_sig/img_visualstud_1.png');" data-aos="fade-up">
+                    <h3 class="font-skyrox">APLICACIONES SIG</h3>
+                    <p class="font-gotham">Dashboards interactivos y cartografía digital.</p>
+                    <i class="fa-solid fa-diagram-project icon-bg"></i>
+                </div>
 
-// Cambiar imagen cada 5 segundos
-setInterval(mostrarSiguiente, 5000);
-</script>
+                <div class="bento-item item-wide" style="background-image: url('img/Topo/topo_1.jpeg');" data-aos="fade-up">
+                    <div class="bento-content">
+                         <h3 class="font-skyrox">TOPOGRAFÍA</h3>
+                         <p class="font-gotham">Precisión y Confianza en levantamientos de alta complejidad.</p>
+                     </div>
+                </div>
+        </section>
 
+        <footer class="main-footer" id="contacto">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="img/geoaxis/GEOAXIS LOGO BLANCO.png" alt="Geoaxis Logo" class="footer-logo">
+                    <p class="font-gotham">Líderes en tecnología geoespacial aplicada a la ingeniería y agricultura.</p>
+                </div>
+                <div class="footer-links font-gotham">
+                    <h4>NAVEGACIÓN</h4>
+                    <a href="#agro">Agro</a>
+                    <a href="#topografia">Topografía</a>
+                    <a href="#sig">Sistemas SIG</a>
+                </div>
+                <div class="footer-social">
+                    <h4>CONECTA</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom font-gotham">
+                <p>&copy; 2026 GEOAXIS | INNOVACIÓN CON PRECISIÓN</p>
+            </div>
+        </footer>
+    </main>
 
-    <section class="cta-section">
-        <h2>¿Listo para empezar tu proyecto?</h2>
-        <p>Contáctanos y descubre cómo podemos apoyarte con tecnología geoespacial avanzada.</p>
-        <a href="contacto.html" class="boton-primario">Contáctanos Ahora</a>
-    </section>
-</main>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Inicialización de animaciones
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
 
-<footer class="footer">
-    <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-        easing: 'ease-in-out'
-    });
-</script>
-<script src="contador.js"></script>
+        // Efecto HUD: Cambiar transparencia del menú al hacer scroll
+        window.addEventListener('scroll', function() {
+            const menu = document.querySelector('.hud-menu');
+            if (window.scrollY > 50) {
+                menu.style.background = "rgba(11, 19, 43, 0.95)";
+            } else {
+                menu.style.background = "rgba(11, 19, 43, 0.8)";
+            }
+        });
+    </script>
 </body>
 </html>
