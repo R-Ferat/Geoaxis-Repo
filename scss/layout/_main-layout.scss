@@ -1,0 +1,27 @@
+// scss/layout/_main-layout.scss
+@use '../base/variables' as *;
+
+/* 4. CONTENIDO PRINCIPAL (El Contenedor Maestro) */
+.main-content {
+    background-color: $azul-dark;
+    min-height: 100vh;
+    overflow-x: hidden;
+    
+    // 1. Aquí reservamos el espacio estricto para el menú HUD
+    padding-left: 80px; 
+    margin-left: 0;
+
+    // 2. Gobernamos todas las secciones internas al mismo tiempo
+    > section, > header, > footer {
+        padding-left: 5%;  // Aire a la izquierda (después del menú)
+        padding-right: 5%; // Aire a la derecha
+        max-width: 1400px; // Límite de ancho para que no se deforme en pantallas gigantes
+        margin: 0 auto;    // Centra el contenido si la pantalla es muy grande
+    }
+}
+
+/* CLASE EXTRA PARA SEPARAR SECCIONES */
+.section-separator {
+    padding-top: 120px; 
+    padding-bottom: 100px;
+}

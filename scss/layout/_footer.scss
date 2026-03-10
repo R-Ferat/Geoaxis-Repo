@@ -1,0 +1,41 @@
+@use '../base/variables' as *;
+
+.main-footer {
+    background: #080e21; 
+    padding: 60px 40px 20px 40px;
+    border-top: 1px solid rgba($lima, 0.1); 
+    margin-top: 100px;
+    width: 100%;
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-logo { max-width: 280px; height: auto; filter: brightness(1.1); margin-bottom: 20px; display: block; }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+        a {
+            display: flex; align-items: center; justify-content: center;
+            width: 45px; height: 45px;
+            background: rgba($lima, 0.05); border: 1px solid rgba($lima, 0.4); border-radius: 50%;
+            color: $lima; font-size: 1.2rem; text-decoration: none; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &:hover { background: $lima; color: $azul-dark; box-shadow: 0 0 20px rgba($lima, 0.6); transform: scale(1.1) translateY(-5px); }
+        }
+    }
+
+    h4 { font-family: 'Skyrox', sans-serif; color: $blanco; margin-bottom: 25px; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; }
+
+    .footer-links a {
+        display: block; color: rgba($blanco, 0.6); text-decoration: none; margin-bottom: 12px; font-family: 'Gotham', sans-serif; font-size: 0.85rem; transition: all 0.3s;
+        &:hover { color: $lima; padding-left: 5px; }
+    }
+
+    .footer-bottom { text-align: center; margin-top: 60px; padding-top: 25px; border-top: 1px solid rgba($blanco, 0.05); font-family: 'Gotham', sans-serif; font-size: 0.75rem; color: rgba($blanco, 0.3); letter-spacing: 1px; }
+}

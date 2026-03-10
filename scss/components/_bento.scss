@@ -1,0 +1,103 @@
+// scss/components/_bento.scss
+@use '../base/variables' as *;
+
+/* 6. BENTO GRID (Acomodo de los cuadros) */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+
+    .bento-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid rgba(212, 255, 0, 0.2);
+        background-color: $azul-dark;
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(11, 19, 43, 0.9) 0%, rgba(11, 19, 43, 0.3) 50%, transparent 100%);
+            z-index: 1;
+        }
+
+        &.item-large {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: #000;
+            border: 2px solid rgba($lima, 0.4);
+            box-shadow: 0 0 20px rgba($lima, 0.1);
+            &::before { display: none; }
+        }
+
+        &.item-wide { grid-column: span 2; }
+        &.item-tall { grid-row: span 2; }
+
+        .bento-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+            color: $lima;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: rgba($blanco, 0.9);
+            margin: 0;
+        }
+    }
+
+    // LA MAGIA: Reconfiguración para Móviles
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr; // Una sola columna
+        grid-auto-rows: auto; 
+
+        .bento-item {
+            grid-column: span 1 !important; 
+            grid-row: span 1 !important;
+            height: 300px; 
+
+            &.item-large { height: 400px; }
+        }
+    }
+}
+
+/* ESTILOS INTERNOS DEL VISOR POTREE */
+.bento-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba($azul-dark, 0.8);
+    color: $lima;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-family: 'Skyrox', sans-serif;
+    font-size: 0.7rem;
+    z-index: 10;
+    border: 1px solid $lima;
+    backdrop-filter: blur(5px);
+}
+
+.potree-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 18px;
+}

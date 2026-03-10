@@ -1,0 +1,41 @@
+// scss/base/_typography.scss
+@use 'variables' as *;
+
+/* A. REGISTRO (La base de todo) */
+@font-face {
+  font-family: 'Skyrox';
+  src: url('../fonts/Skyrox-MediumCondensed.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham Book Font.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham-UltraIta.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* C. TUS REGLAS DE ESTILO BASE */
+h1, h2, .bento-item h3 {
+    font-family: 'Skyrox', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p, .footer-bottom {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 400; // Aquí forzamos el uso de Gotham Book
+}

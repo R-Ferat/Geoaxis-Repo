@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+
+.page-index {
+    .main-content {
+        background-color: #0B132B; // Tu azul-dark
+        min-height: 100vh;
+        overflow-x: hidden;
+    
+    // Esto hace que el contenido se empuje, pero el fondo siga tocando la orilla
+        padding-left: 80px; 
+        margin-left: 0; 
+        }
+}

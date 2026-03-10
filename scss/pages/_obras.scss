@@ -1,0 +1,346 @@
+@use '../base/variables' as *;
+
+.page-obras {
+    .main-content {
+        background-color: #0B132B; // Tu azul-dark
+        min-height: 100vh;
+        overflow-x: hidden;
+    
+    // Esto hace que el contenido se empuje, pero el fondo siga tocando la orilla
+        padding-left: 80px; 
+        margin-left: 0; 
+    }
+}
+
+/* ==========================================================================
+   9. SECCIÓN ARSENAL / EQUIPAMIENTO (OBRAS.HTML)
+   ========================================================================== */
+
+.arsenal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.arsenal-card {
+    position: relative;
+    height: 400px; 
+    border-radius: 20px;
+    overflow: hidden;
+    background: $azul-dark;
+    border: 1px solid rgba($lima, 0.15);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+
+    .card-bg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.8s ease;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(
+                to bottom, 
+                rgba($azul-dark, 0.2) 0%, 
+                rgba($azul-dark, 0.7) 50%,
+                rgba($azul-dark, 1) 100%
+            );
+        }
+    }
+
+    .card-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+
+        i {
+            font-size: 50px;
+            color: $lima;
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 0 15px rgba($lima, 0.3));
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: $blanco;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: rgba($blanco, 0.85);
+            margin: 0;
+            max-width: 90%;
+            opacity: 0.9;
+        }
+    }
+
+    &:hover {
+        border-color: $lima;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba($lima, 0.1);
+        transform: translateY(-10px);
+
+        .card-bg {
+            transform: scale(1.15); 
+        }
+
+        i {
+            transform: scale(1.1) translateY(-5px);
+            filter: drop-shadow(0 0 20px $lima);
+        }
+    }
+}
+
+/* ==========================================================================
+    10. PROYECTOS TÉCNICOS 
+   ========================================================================== */
+
+.project-case {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .project-visual {
+        flex: 1; 
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        
+        .img-fluid {
+            max-width: 100%; 
+            height: auto;    
+            display: block;
+            border: 1px solid rgba($lima, 0.2);
+            border-radius: 15px;
+        }
+
+        .shadow-neon {
+            box-shadow: 0 0 20px rgba($lima, 0.15);
+            transition: box-shadow 0.3s ease;
+            &:hover {
+                box-shadow: 0 0 35px rgba($lima, 0.3);
+            }
+        }
+    }
+
+    .project-info {
+        flex: 1; 
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    
+    video {
+        width: 100%;
+        display: block;
+    }
+    
+    .badge-tech {
+        position: absolute;
+        top: 15px; left: 15px;
+        background: rgba($azul-dark, 0.8);
+        color: $lima;
+        padding: 5px 12px;
+        font-size: 0.7rem;
+        border: 1px solid $lima;
+        font-family: 'Skyrox';
+        border-radius: 5px;
+    }
+}
+
+/* ==========================================================================
+   11. SECCIÓN DIDÁCTICA: TABLA COMPARATIVA
+   ========================================================================== */
+
+.comparativa-tecnica {
+    padding: 100px 0;
+    background: radial-gradient(circle at top right, rgba($lima, 0.05), transparent);
+
+    .comparativa-wrapper {
+        background: rgba(11, 19, 43, 0.4);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba($blanco, 0.1);
+        border-radius: 30px;
+        padding: 50px;
+        overflow: hidden;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, transparent, $lima, transparent);
+        }
+    }
+}
+
+.table-geoaxis {
+    width: 100%;
+    border-spacing: 0;
+    margin-top: 30px;
+
+    th, td {
+        padding: 25px;
+        text-align: left;
+        border-bottom: 1px solid rgba($blanco, 0.05);
+        vertical-align: middle;
+    }
+
+    thead th {
+        background: rgba($blanco, 0.02);
+        color: rgba($blanco, 0.6);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-bottom: 2px solid rgba($lima, 0.2);
+    }
+
+    td:first-child {
+        font-weight: bold;
+        color: $blanco;
+        width: 25%;
+    }
+
+    td:nth-child(2) {
+        color: rgba($blanco, 0.4);
+        font-style: italic;
+    }
+
+    th:last-child, 
+    td:last-child {
+        background: rgba($lima, 0.03);
+        border-left: 1px solid rgba($lima, 0.1);
+        border-right: 1px solid rgba($lima, 0.1);
+        width: 35%;
+        color: $lima;
+        font-weight: 600;
+        position: relative;
+    }
+
+    td:last-child::before {
+        content: '●';
+        margin-right: 10px;
+        font-size: 0.7rem;
+        vertical-align: middle;
+        filter: drop-shadow(0 0 5px $lima);
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    tbody tr:hover {
+        background: rgba($blanco, 0.02);
+        td:last-child {
+            background: rgba($lima, 0.06);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .table-geoaxis {
+        display: block;
+        overflow-x: auto;
+        th, td { padding: 15px; font-size: 0.8rem; }
+    }
+}
+
+/* ==========================================================================
+   12. SECCIÓN DIDÁCTICA: Entregables
+   ========================================================================== */
+
+.entregables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.entregable-card {
+    position: relative;
+    background: rgba(11, 19, 43, 0.4);
+    border: 1px solid rgba($lima, 0.15);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+
+    .card-glow {
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: radial-gradient(circle, rgba($lima, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    i {
+        font-size: 3rem;
+        color: $lima;
+        margin-bottom: 25px;
+        filter: drop-shadow(0 0 10px rgba($lima, 0.4));
+    }
+
+    h4 {
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        opacity: 0.8;
+    }
+
+    .software-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+        .tag {
+            background: rgba($lima, 0.1);
+            border: 1px solid rgba($lima, 0.3);
+            color: $lima;
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-family: 'Skyrox';
+        }
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $lima;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba($lima, 0.1);
+    }
+}
