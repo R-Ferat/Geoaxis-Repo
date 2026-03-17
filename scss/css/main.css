@@ -32,6 +32,9 @@
   font-weight: 900;
   font-style: italic;
 }
+/* ==========================================================================
+   RESET Y CONFIGURACIÓN BASE
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +46,24 @@ body {
   color: #F5F5F1;
   font-family: "Gotham", sans-serif;
   overflow-x: hidden;
+}
+
+/* ==========================================================================
+   CLASES UTILITARIAS GLOBALES
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-separator {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 /* A. REGISTRO (La base de todo) */
@@ -137,7 +158,7 @@ p, .footer-bottom {
   background-repeat: no-repeat;
   width: 100% !important;
   max-width: none !important;
-  margin: 0 !important;
+  margin: 0 0 80px 0 !important;
   padding: 0 !important;
   background-image: linear-gradient(to right, rgba(11, 19, 43, 0.95) 15%, rgba(11, 19, 43, 0.4) 50%, transparent 100%);
 }
@@ -208,6 +229,7 @@ p, .footer-bottom {
   background-color: #0B132B;
   background-size: cover;
   background-position: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .bento-grid .bento-item::before {
   content: "";
@@ -215,6 +237,16 @@ p, .footer-bottom {
   inset: 0;
   background: linear-gradient(to top, rgba(11, 19, 43, 0.9) 0%, rgba(11, 19, 43, 0.3) 50%, transparent 100%);
   z-index: 1;
+  transition: all 0.4s ease;
+}
+.bento-grid .bento-item:not(.item-large):hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(212, 255, 0, 0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 255, 0, 0.2);
+  z-index: 10;
+}
+.bento-grid .bento-item:not(.item-large):hover::before {
+  background: linear-gradient(to top, rgba(11, 19, 43, 0.8) 0%, rgba(11, 19, 43, 0.1) 40%, transparent 100%);
 }
 .bento-grid .bento-item.item-large {
   grid-column: span 2;
@@ -293,6 +325,125 @@ p, .footer-bottom {
   border-radius: 18px;
 }
 
+.testimonials-section {
+  padding: 80px 0;
+}
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.testimonials-section h2 span {
+  color: #D4FF00;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 255, 0, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+.testimonial-card:hover {
+  border-color: rgba(212, 255, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+.testimonial-card:hover .quote-icon {
+  color: rgba(212, 255, 0, 0.2);
+  transform: scale(1.1) rotate(-10deg);
+}
+.testimonial-card .quote-icon {
+  font-size: 6rem;
+  color: rgba(245, 245, 241, 0.03);
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+.testimonial-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  color: rgba(245, 245, 241, 0.9);
+  font-style: italic;
+}
+.testimonial-card .client-meta {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(245, 245, 241, 0.1);
+  padding-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+.testimonial-card .client-meta .client-name {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.testimonial-card .client-meta .client-company {
+  font-size: 0.85rem;
+  font-family: "Gotham", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   COMPONENTE: PROJECT CASE (Caja dividida texto/imagen)
+   ========================================================================== */
+.project-case {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.project-case.reverse {
+  flex-direction: row-reverse;
+}
+.project-case .project-info {
+  flex: 1;
+}
+.project-case .project-info p {
+  line-height: 1.7;
+}
+.project-case .project-visual {
+  flex: 1;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.project-case .project-visual .img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  border-radius: 15px;
+}
+.project-case .project-visual .shadow-neon {
+  box-shadow: 0 0 20px rgba(212, 255, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .project-case {
+    flex-direction: column !important;
+    gap: 30px;
+  }
+}
 /* 4. CONTENIDO PRINCIPAL (El Contenedor Maestro) */
 .main-content {
   background-color: #0B132B;
@@ -885,4 +1036,158 @@ p, .footer-bottom {
   transform: translateY(-10px);
   border-color: #D4FF00;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 255, 0, 0.1);
+}
+
+/* ==========================================================================
+   SECCIÓN NOSOTROS (Página completa y Pills de Industrias)
+   ========================================================================== */
+.page-nosotros .main-content {
+  margin-left: 80px;
+}
+.page-nosotros .hero-section {
+  margin-bottom: 60px;
+}
+
+.industries-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.industry-pill {
+  background: rgba(11, 19, 43, 0.6);
+  border: 1px solid rgba(212, 255, 0, 0.3);
+  color: #F5F5F1;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-family: "Skyrox", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+.industry-pill i {
+  color: #D4FF00;
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 5px rgba(212, 255, 0, 0.4));
+}
+.industry-pill:hover {
+  background: rgba(212, 255, 0, 0.08);
+  border-color: #D4FF00;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(212, 255, 0, 0.2);
+  transform: translateY(-5px);
+  color: #D4FF00;
+}
+
+/* ==========================================================================
+   SECCIÓN: PRESENCIA GEOAXIS (Tarjetas Horizontales)
+   ========================================================================== */
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.presence-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(245, 245, 241, 0.05);
+  border-left: 4px solid #D4FF00;
+  padding: 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.presence-card .icon-box {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(212, 255, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.presence-card .icon-box i {
+  font-size: 1.8rem;
+  color: #D4FF00;
+  filter: drop-shadow(0 0 8px rgba(212, 255, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+.presence-card .text-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.presence-card .text-box p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(245, 245, 241, 0.8);
+}
+.presence-card:hover {
+  background: rgba(212, 255, 0, 0.05);
+  border-color: rgba(212, 255, 0, 0.3);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.presence-card:hover .icon-box i {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .presence-grid {
+    grid-template-columns: 1fr;
+  }
+  .presence-card {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid #D4FF00;
+  }
+  .presence-card .text-box h4 {
+    font-size: 1.1rem;
+  }
+}
+/* ==========================================================================
+   ESTRUCTURA FORZADA PARA "QUIÉNES SOMOS" (Texto y Foto)
+   ========================================================================== */
+.page-nosotros .project-case {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.page-nosotros .project-case .project-info {
+  flex: 1;
+}
+.page-nosotros .project-case .project-info p {
+  text-align: justify;
+  line-height: 1.6;
+}
+.page-nosotros .project-case .project-visual {
+  flex: 1;
+  position: relative;
+}
+.page-nosotros .project-case .project-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  box-shadow: 0 0 20px rgba(212, 255, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .page-nosotros .project-case {
+    flex-direction: column;
+    gap: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */

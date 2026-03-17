@@ -16,6 +16,9 @@
         background-color: $azul-dark;
         background-size: cover;
         background-position: center;
+        
+        // --- NUEVO: Transición suave para la tarjeta ---
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         &::before {
             content: '';
@@ -23,6 +26,22 @@
             inset: 0;
             background: linear-gradient(to top, rgba(11, 19, 43, 0.9) 0%, rgba(11, 19, 43, 0.3) 50%, transparent 100%);
             z-index: 1;
+            
+            // --- NUEVO: Transición suave para el brillo del fondo ---
+            transition: all 0.4s ease;
+        }
+
+        // --- LA MAGIA DEL HOVER (Ignorando al .item-large) ---
+        &:not(.item-large):hover {
+            transform: translateY(-8px) scale(1.02); // Se levanta y crece ligeramente
+            border-color: rgba($lima, 0.6); // Borde neón más fuerte
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba($lima, 0.2); // Sombra 3D y resplandor
+            z-index: 10; // Evita que se tape con otras tarjetas al crecer
+
+            // Aclaramos un poco el fondo para que la foto resalte
+            &::before {
+                background: linear-gradient(to top, rgba(11, 19, 43, 0.8) 0%, rgba(11, 19, 43, 0.1) 40%, transparent 100%);
+            }
         }
 
         &.item-large {

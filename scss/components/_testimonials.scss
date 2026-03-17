@@ -1,0 +1,91 @@
+// scss/components/_testimonials.scss
+@use '../base/variables' as *;
+
+.testimonials-section {
+    padding: 80px 0; // Aire arriba y abajo
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        
+        span {
+            color: $lima; // Acento neón
+        }
+    }
+}
+
+.testimonials-grid {
+    display: grid;
+    // Esto hace que en compu se vean 2 columnas, y en celular bajen a 1 automáticamente
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto; // Centra la cuadrícula
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.03); // Fondo cristalino muy sutil
+    border: 1px solid rgba($lima, 0.1); // Borde apenas visible
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px); // Efecto vidrio
+    overflow: hidden;
+
+    // Efecto Hover (Al pasar el mouse)
+    &:hover {
+        border-color: rgba($lima, 0.5);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.05);
+        
+        .quote-icon {
+            color: rgba($lima, 0.2);
+            transform: scale(1.1) rotate(-10deg);
+        }
+    }
+
+    .quote-icon {
+        font-size: 6rem;
+        color: rgba($blanco, 0.03); // Marca de agua gigante
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        transition: all 0.4s ease;
+        z-index: 0;
+    }
+
+    p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2; // Para que el texto esté por encima de la comilla gigante
+        color: rgba($blanco, 0.9);
+        font-style: italic; // Cursiva para citas
+    }
+
+    .client-meta {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba($blanco, 0.1); // Línea divisoria
+        padding-top: 20px;
+        position: relative;
+        z-index: 2;
+
+        .client-name {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .client-company {
+            font-size: 0.85rem;
+            font-family: 'Gotham', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+    }
+}

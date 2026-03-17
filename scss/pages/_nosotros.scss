@@ -1,0 +1,187 @@
+// Importamos tus variables para poder usar $lima, $azul-dark, $font-header, etc.
+// El 'as *' nos permite usar las variables directamente sin poner "variables.$lima"
+@use '../base/variables' as *;
+
+/* ==========================================================================
+   SECCIÓN NOSOTROS (Página completa y Pills de Industrias)
+   ========================================================================== */
+
+// 1. Comportamiento de márgenes específico para la página Nosotros
+.page-nosotros {
+    .main-content {
+        margin-left: 80px; // Pegado al HUD, igual que en Obras
+    }
+    .hero-section {
+        margin-bottom: 60px; // Espacio controlado
+    }
+}
+
+// 2. Contenedor de las etiquetas de industria
+.industries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+// 3. Estilo de cada "Píldora" (Usando tus variables de identidad)
+.industry-pill {
+    background: rgba($azul-dark, 0.6);
+    border: 1px solid rgba($lima, 0.3);
+    color: $blanco;
+    padding: 15px 30px;
+    border-radius: 40px;
+    
+    // APLICAMOS TU VARIABLE DE FUENTE
+    font-family: $font-header; 
+    
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+
+    i {
+        color: $lima;
+        font-size: 1.3rem;
+        filter: drop-shadow(0 0 5px rgba($lima, 0.4));
+    }
+
+    &:hover {
+        background: rgba($lima, 0.08);
+        border-color: $lima;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba($lima, 0.2);
+        transform: translateY(-5px);
+        color: $lima; // El texto brilla en verde eléctrico
+    }
+}
+
+/* ==========================================================================
+   SECCIÓN: PRESENCIA GEOAXIS (Tarjetas Horizontales)
+   ========================================================================== */
+.presence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.presence-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02); // Fondo de cristal súper sutil
+    border: 1px solid rgba($blanco, 0.05);
+    border-left: 4px solid $lima; // Línea de acento corporativo
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    
+    .icon-box {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: rgba($lima, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        i {
+            font-size: 1.8rem;
+            color: $lima;
+            filter: drop-shadow(0 0 8px rgba($lima, 0.5));
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .text-box {
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+            color: rgba($blanco, 0.8);
+        }
+    }
+
+    // Interacción al pasar el mouse
+    &:hover {
+        background: rgba($lima, 0.05);
+        border-color: rgba($lima, 0.3);
+        transform: translateX(10px); // Se desplaza ligeramente a la derecha
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        
+        .icon-box i {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Ajuste responsive para móviles
+@media (max-width: 768px) {
+    .presence-grid {
+        grid-template-columns: 1fr; // Una sola columna en celular
+    }
+    .presence-card {
+        flex-direction: column;
+        text-align: center;
+        border-left: none;
+        border-top: 4px solid $lima; // La línea pasa arriba
+        
+        .text-box {
+            h4 { font-size: 1.1rem; }
+        }
+    }
+}
+
+/* ==========================================================================
+   ESTRUCTURA FORZADA PARA "QUIÉNES SOMOS" (Texto y Foto)
+   ========================================================================== */
+.page-nosotros {
+    .project-case {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 50px;
+        
+        .project-info {
+            flex: 1; // Toma exactamente el 50% del espacio
+            
+            p {
+                text-align: justify; // Justificamos todo el texto de esta caja
+                line-height: 1.6;
+            }
+        }
+
+        .project-visual {
+            flex: 1; // Toma el otro 50%
+            position: relative;
+            
+            img {
+                width: 100%; // Se adapta a su mitad de la pantalla
+                height: auto;
+                border-radius: 15px;
+                border: 1px solid rgba($lima, 0.2);
+                box-shadow: 0 0 20px rgba($lima, 0.15);
+            }
+        }
+    }
+}
+
+// Que en celulares se ponga uno debajo del otro
+@media (max-width: 768px) {
+    .page-nosotros .project-case {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

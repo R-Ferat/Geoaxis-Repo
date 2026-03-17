@@ -1,0 +1,52 @@
+@use '../base/variables' as *;
+
+/* ==========================================================================
+   COMPONENTE: PROJECT CASE (Caja dividida texto/imagen)
+   ========================================================================== */
+.project-case {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    
+    &.reverse {
+        flex-direction: row-reverse; // Para alternar lados si lo necesitas
+    }
+
+    .project-info {
+        flex: 1; // Ocupa el 50%
+        
+        // Aquí aprovechamos para darle un poco más de altura de línea al texto justificado
+        p {
+            line-height: 1.7; 
+        }
+    }
+
+    .project-visual {
+        flex: 1; // Ocupa el 50%
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        
+        // Evita que la imagen se desborde
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba($lima, 0.2);
+            border-radius: 15px;
+        }
+
+        .shadow-neon {
+            box-shadow: 0 0 20px rgba($lima, 0.15);
+        }
+    }
+}
+
+// Ajuste para celulares
+@media (max-width: 768px) {
+    .project-case {
+        flex-direction: column !important;
+        gap: 30px;
+    }
+}

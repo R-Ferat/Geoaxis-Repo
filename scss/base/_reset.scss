@@ -1,6 +1,6 @@
-
-
-
+/* ==========================================================================
+   RESET Y CONFIGURACIÓN BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +8,31 @@
 }
 
 body {
-    background-color: #0B132B; // Tu Azul Profundo
+    // Usamos las variables si ya las importaste, o los colores directos
+    background-color: #0B132B; 
     color: #F5F5F1;
     font-family: 'Gotham', sans-serif;
     overflow-x: hidden;
+}
+
+/* ==========================================================================
+   CLASES UTILITARIAS GLOBALES
+   ========================================================================== */
+
+// Contenedor principal para limitar el ancho y centrar el contenido
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+// Separador para dar "respiro" entre secciones
+.section-separator {
+    padding-top: 120px; 
+    padding-bottom: 100px;
+}
+
+// Clase utilitaria para justificar texto
+.text-justify {
+    text-align: justify;
 }

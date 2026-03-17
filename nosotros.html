@@ -1,81 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>GeoMagia - Sobre Nosotros</title>
-
-    <meta name="description" content="Conoce al equipo de GeoMagia, nuestra misión, visión y compromiso con la geomática.">
-    <meta name="author" content="GeoMagia">
-
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/nosotros.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoaxis | Sobre Nosotros</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
-<header class="header">
-    <div class="contenedor">
-        <div class="barra">
-            <h1 class="logo">Geo<span>Magia</span></h1>
-            <nav class="navegacion">
-                <a href="#">Inicio</a>
-                <a href="obras.html">Obras</a>
-                <a href="agro.html">Agro</a>
-                <a href="sig.html">SIG</a>
-                <a href="blog2.html">Blog</a>
-                <a href="proyectos.html">Proyectos</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+<body class="page-nosotros">
+
+    <nav class="hud-menu">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/geoaxis/MONOGRAMA VERDE ELECTRICO.png" alt="Geoaxis Home" class="mini-logo">
+            </a>
         </div>
-    </div>
+        <ul class="nav-links">
+            <li><a href="index.html#agro"><i class="fa-solid fa-seedling"></i> <span>AGRO ANÁLISIS</span></a></li>
+            <li><a href="index.html#nosotros"><i class="fa-solid fa-circle-info"></i> <span>NOSOTROS</span></a></li>
+            <li><a href="obras.html"><i class="fa-solid fa-microscope"></i> <span>TOPOGRAFÍA</span></a></li>
+            <li><a href="index.html#sig"><i class="fa-solid fa-map-location-dot"></i> <span>APLICACIONES SIG</span></a></li>
+            <li><a href="index.html#dron"><i class="fa-solid fa-helicopter"></i> <span>VIGILANCIA DRON</span></a></li>
+            <li><a href="index.html#blog"><i class="fa-solid fa-newspaper"></i> <span>BLOG GEOMÁTICA</span></a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-envelope-open-text"></i> <span>CONTACTO</span></a></li>
+        </ul>
 
-    <div class="hero-nosotros" data-aos="fade-in">
-        <h1>Sobre Nosotros</h1>
-        <p>Una comunidad dedicada a compartir conocimiento geoespacial con impacto</p>
-    </div>
-</header>
-
-<main class="contenedor nosotros-detalle">
-    <section class="nosotros-grid">
-        <div class="nosotros-imagen" data-aos="fade-right">
-            <img src="img/LOGO-UNAM-919x1024.png" alt="UNAM Logo" />
+        <div class="hud-bottom">
+            <div class="hud-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="#" class="btn-portal">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>PORTAL DE DATOS</span>
+            </a>
         </div>
-        <div class="nosotros-texto" data-aos="fade-left">
-            <h2 class="titulo-seccion">Nuestra Comunidad</h2>
-            <p>
-                Somos una comunidad de egresados de la Facultad de Ingeniería de la UNAM, interesados en la difusión, investigación y desarrollo en Geomática y Geociencias. Promovemos el aprendizaje continuo, el trabajo colaborativo y la ética profesional.
-            </p>
-            <p>
-                Puedes ponerte en contacto en: <strong>proyectos@geomagia.com.mx</strong>
-            </p>
-        </div>
-    </section>
-</main>
+    </nav>
 
-<section class="cta-section">
-    <div class="contenedor">
-        <h2>¿Te interesa colaborar con nosotros?</h2>
-        <p>Estamos abiertos a propuestas, proyectos conjuntos o contribuciones académicas</p>
-        <a href="contacto.html" class="boton-primario">Contáctanos</a>
+    <main class="main-content">
+        
+        <header class="hero-section" style="background-image: linear-gradient(to right, rgba(11, 19, 43, 0.95) 15%, rgba(11, 19, 43, 0.4) 50%, transparent 100%), url('img/Topo/IMG_5140.jpg');">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="font-skyrox text-white">NUESTRO ADN <br><span class="text-lima">GEOAXIS</span></h1>
+                <p class="font-gotham text-white">Transformamos la forma en que el mundo trabaja a través de la precisión absoluta, la innovación tecnológica y el rigor de la ingeniería.</p>
+            </div>
+        </header>
+
+        <section class="container py-5 section-separator">
+            <div class="project-case" data-aos="fade-up">
+                <div class="project-info">
+                    <h2 class="font-skyrox text-white mb-4">¿QUIÉNES <span class="text-lima">SOMOS?</span></h2>
+                    <p class="font-gotham text-white mb-3"><strong>Geoaxis</strong> es una empresa formada por un grupo élite de Ingenieros: <strong>Topógrafos, Geodestas y GeoInformáticos.</strong></p>
+                    <p class="font-gotham text-white mb-4">Con un profundo conocimiento de la industria de la construcción, extracción e infraestructura, ofrecemos soluciones métricas de alto desempeño. Nuestro objetivo es agilizar tu flujo de trabajo proporcionando datos espaciales inteligentes y eficientes para maximizar la productividad, garantizar la seguridad y elevar el valor técnico de cada uno de tus proyectos.</p>
+                    <p class="font-gotham text-lima"><strong>Empoderamos a nuestros clientes con certezas milimétricas.</strong></p>
+                </div>
+                <div class="project-visual">
+                    <img src="img/Topo/IMG_6445.jpg" alt="Equipo Geoaxis en campo" class="img-fluid shadow-neon">
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="entregables-grid">
+                <div class="entregable-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h4 class="font-skyrox text-white">Nuestra Misión</h4>
+                    <p class="text-white font-gotham">Aportar a la industria innovación tecnológica, metodologías y servicios que enriquezcan el mercado y contribuyan a un crecimiento de infraestructura inteligente y responsable.</p>
+                </div>
+                
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h4 class="font-skyrox text-white">Nuestra Visión</h4>
+                    <p class="text-white font-gotham">Mantener el compromiso inquebrantable de encabezar las innovaciones tecnológicas y soluciones geoespaciales, cumpliendo siempre con los más altos estándares de calidad.</p>
+                </div>
+
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-gem"></i></div>
+                    <h4 class="font-skyrox text-white">Nuestros Valores</h4>
+                    <ul class="text-white font-gotham" style="list-style: none; padding: 0; margin-top: 15px; text-align: left;">
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;"><i class="fa-solid fa-check text-lima" style="font-size: 0.8rem; margin-right: 10px;"></i> Ética y Honestidad</li>
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;"><i class="fa-solid fa-check text-lima" style="font-size: 0.8rem; margin-right: 10px;"></i> Compromiso Absoluto</li>
+                        <li style="margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 5px;"><i class="fa-solid fa-check text-lima" style="font-size: 0.8rem; margin-right: 10px;"></i> Eficacia Técnica</li>
+                        <li style="margin-bottom: 10px;"><i class="fa-solid fa-check text-lima" style="font-size: 0.8rem; margin-right: 10px;"></i> Trabajo en Equipo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+<section class="container section-separator">
+    <h2 class="font-skyrox text-center mb-4" data-aos="fade-up">PRESENCIA <span class="text-lima">GEOAXIS</span></h2>
+    <p class="font-gotham text-center text-white mb-5" style="opacity: 0.8;" data-aos="fade-up" data-aos-delay="100">Nuestra huella técnica está presente en los proyectos más exigentes de la región:</p>
+    
+    <div class="presence-grid">
+        <div class="presence-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+            <div class="text-box">
+                <h4 class="font-skyrox text-lima">Red Geodésica Nacional Activa</h4>
+                <p class="font-gotham text-white">Vinculación de bancos de nivel bajo las normativas del INEGI para certidumbre legal y técnica.</p>
+            </div>
+        </div>
+
+        <div class="presence-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box"><i class="fa-solid fa-water"></i></div>
+            <div class="text-box">
+                <h4 class="font-skyrox text-lima">Infraestructura Hidráulica</h4>
+                <p class="font-gotham text-white">Topografía digital, secciones y control de obra en la remodelación del Canal de Sacramento.</p>
+            </div>
+        </div>
+
+        <div class="presence-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box"><i class="fa-solid fa-mountain"></i></div>
+            <div class="text-box">
+                <h4 class="font-skyrox text-lima">Minería y Extracción</h4>
+                <p class="font-gotham text-white">Levantamientos híbridos (GNSS + Dron) para cálculos volumétricos de alta precisión en plantas de agregados.</p>
+            </div>
+        </div>
+
+        <div class="presence-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box"><i class="fa-solid fa-road"></i></div>
+            <div class="text-box">
+                <h4 class="font-skyrox text-lima">Obras Lineales y Urbanización</h4>
+                <p class="font-gotham text-white">Restitución fotogramétrica y trazo de ejes para fraccionamientos y vías terrestres.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<footer class="footer">
-    <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
-</footer>
+<section class="container section-separator mb-5">
+    <h2 class="font-skyrox text-center mb-5" data-aos="fade-up">INDUSTRIAS QUE <span class="text-lima">ATENDEMOS</span></h2>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true,
-        easing: 'ease-in-out'
-    });
-</script>
+        <section class="container py-5 mb-5">
+            
+            
+            <div class="industries-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="industry-pill"><i class="fa-solid fa-hard-hat"></i> CONSTRUCCIÓN Y OBRA CIVIL</div>
+                <div class="industry-pill"><i class="fa-solid fa-gem"></i> MINERÍA Y PÉTREOS</div>
+                <div class="industry-pill"><i class="fa-solid fa-tractor"></i> AGRO INDUSTRIA</div>
+                <div class="industry-pill"><i class="fa-solid fa-road"></i> VÍAS TERRESTRES</div>
+                <div class="industry-pill"><i class="fa-solid fa-water"></i> HIDRÁULICA Y DRENAJE</div>
+                <div class="industry-pill"><i class="fa-solid fa-city"></i> DESARROLLO URBANO</div>
+                <div class="industry-pill"><i class="fa-solid fa-map"></i> CATASTRO Y G.I.S.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>

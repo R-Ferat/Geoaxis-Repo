@@ -9,6 +9,8 @@
 @use 'components/buttons';
 @use 'components/hero';
 @use 'components/bento';
+@use 'components/testimonials';
+@use 'components/project-case';
 
 // 3. LAYOUT
 @use 'layout/main-layout';
@@ -18,3 +20,4 @@
 // 4. PAGES
 @use 'pages/home';
 @use 'pages/obras';
+@use 'pages/nosotros';
