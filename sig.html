@@ -1,109 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Soluciones SIG: geoportales, visores de mapas, automatización y geoservicios.">
-  <title>GeoMagia - SIG</title>
-
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="stylesheet" href="/css/sig.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoaxis | Aplicaciones SIG y QuickMap</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
-<header class="header">
-  <div class="contenedor">
-    <div class="barra">
-       <h1 class="logo">
-                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
-            </h1>
-      <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="obras.html">Obras</a>
-        <a href="agro.html">Agro</a>
-        <a href="sig.html" class="activo">SIG</a>
-        <a href="blog2.html">Blog</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </div>
-</header>
+<body class="page-sig">
 
-<section class="hero">
-  <div class="contenedor">
-    <h1>Soluciones SIG Avanzadas</h1>
-    <p>Geoportales, automatización de procesos y geoservicios a la medida</p>
-  </div>
-</section>
-
-<main class="contenedor servicios-detalle">
-  <section aria-label="Detalle de servicios">
-
-    <!-- Servicio 1 -->
-<div class="servicio-detalle">
-  <div class="servicio-texto">
-    <h3>Geoportales y Visores</h3>
-    <p>Desarrollamos plataformas interactivas que permiten compartir, explorar y analizar datos geográficos en línea. Nuestros geoportales están diseñados para ser intuitivos y escalables.</p>
-    <ul>
-      <li><i class="fas fa-check"></i> Visores web interactivos</li>
-      <li><i class="fas fa-check"></i> Dashboards personalizados</li>
-      <li><i class="fas fa-check"></i> Publicación de mapas en línea</li>
-    </ul>
-    <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-  </div>
-  <div class="servicio-imagen" style="background-image: url('/img/geoportal.png');"></div>
-</div>
-
-
-    <!-- Servicio 2 -->
-    <div class="servicio-detalle">
-      <div class="servicio-texto">
-        <h3>Automatización con Python</h3>
-        <p>Optimizamos flujos de trabajo mediante programación en <b>Python</b>, utilizando librerías como <b>GeoPandas</b> y <b>GDAL</b>. Reducimos tiempos de procesamiento y mejoramos la precisión de tus proyectos SIG.</p>
-        <ul>
-          <li><i class="fas fa-check"></i> Scripts personalizados</li>
-          <li><i class="fas fa-check"></i> Procesamiento de datos masivos</li>
-          <li><i class="fas fa-check"></i> Integración con bases de datos</li>
+    <nav class="hud-menu">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/geoaxis/MONOGRAMA VERDE ELECTRICO.png" alt="Geoaxis Home" class="mini-logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="sig.html"><i class="fa-solid fa-map-location-dot"></i> <span>APLICACIONES SIG</span></a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-circle-info"></i> <span>NOSOTROS</span></a></li>
+            <li><a href="obras.html"><i class="fa-solid fa-microscope"></i> <span>TOPOGRAFÍA</span></a></li>
+            <li><a href="agro.html"><i class="fa-solid fa-seedling"></i> <span>AGRO ANÁLISIS</span></a></li>
+            <li><a href="index.html#dron"><i class="fa-solid fa-helicopter"></i> <span>VIGILANCIA DRON</span></a></li>
+            <li><a href="index.html#blog"><i class="fa-solid fa-newspaper"></i> <span>BLOG GEOMÁTICA</span></a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-envelope-open-text"></i> <span>CONTACTO</span></a></li>
         </ul>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('/img/python.jpg');"></div>
-    </div>
 
-    <!-- Servicio 3 -->
-    <div class="servicio-detalle">
-      <div class="servicio-texto">
-        <h3>Geoservicios Libres</h3>
-        <p>Implementamos soluciones robustas con <b>GeoServer</b> y <b>PostGIS</b>, garantizando sistemas abiertos, potentes y adaptados a tus necesidades sin costo de licencias.</p>
-        <ul>
-          <li><i class="fas fa-check"></i> Servidores de mapas (WMS/WFS)</li>
-          <li><i class="fas fa-check"></i> Bases de datos espaciales</li>
-          <li><i class="fas fa-check"></i> Integración con clientes SIG</li>
-        </ul>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://images.unsplash.com/photo-1581091870622-84e8be89c7c9?auto=format&fit=crop&w=900&q=80');"></div>
-    </div>
+        <div class="hud-bottom">
+            <div class="hud-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <a href="#" class="btn-portal">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>PORTAL DE DATOS</span>
+            </a>
+        </div>
+    </nav>
 
-  </section>
-</main>
+    <main class="main-content">
+        
+        <header class="hero-section" style="background-image: linear-gradient(to right, rgba(11, 19, 43, 0.95) 15%, rgba(11, 19, 43, 0.5) 50%, transparent 100%), url('img/app_sig/SIG_DESARROLLOWEB1.jpg');">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="font-skyrox text-white">INTELIGENCIA <br><span class="text-lima">ESPACIAL A LA MEDIDA</span></h1>
+                <p class="font-gotham text-white">Transformamos tus datos geográficos en plataformas interactivas. Soluciones SIG personalizadas para tomar decisiones estratégicas en tiempo real.</p>
+                <div class="hero-btns">
+                    <a href="#quickmap" class="btn-geo">DESCUBRE QUICKMAP</a>
+                </div>
+            </div>
+        </header>
 
-<section class="cta-section">
-  <div class="contenedor">
-    <h2>Transforma tu organización con SIG</h2>
-    <p>Desde geoportales hasta automatización, diseñamos soluciones personalizadas que impulsan tus proyectos.</p>
-    <a href="contacto.html" class="boton-primario">Solicitar consulta</a>
-  </div>
-</section>
+        <section class="container section-separator">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="tag-lima d-inline-block mb-2">DESARROLLO A LA MEDIDA</span>
+                <h2 class="font-skyrox text-white">TU OPERACIÓN, <span class="text-lima">TU PLATAFORMA</span></h2>
+                <p class="font-gotham text-white mx-auto mt-3" style="max-width: 800px; opacity: 0.8;">No te adaptes a un software genérico de caja. En Geoaxis analizamos tus flujos de trabajo y construimos arquitecturas de datos espaciales exclusivas para tu empresa.</p>
+            </div>
 
-<footer class="footer">
-  <p>&copy; 2025 GeoMagia | Todos los derechos reservados</p>
-</footer>
+            <div class="entregables-grid">
+                <div class="entregable-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="file-icon"><i class="fa-solid fa-database"></i></div>
+                    <h4 class="font-skyrox text-white">Geodatabases</h4>
+                    <p class="text-white font-gotham">Estructuración, limpieza y migración de tus datos históricos a bases de datos espaciales centralizadas y seguras.</p>
+                </div>
+                <div class="entregable-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="file-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h4 class="font-skyrox text-white">Dashboards Web</h4>
+                    <p class="text-white font-gotham">Tableros de control interactivos. Visualiza el avance de tus obras, inventarios y KPIs georreferenciados desde cualquier navegador.</p>
+                </div>
+                <div class="entregable-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="file-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h4 class="font-skyrox text-white">Análisis Espacial</h4>
+                    <p class="text-white font-gotham">Geoprocesamiento avanzado para selección de sitios, análisis de riesgos, cuencas visuales y optimización de rutas.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="quickmap" class="container section-separator mb-5">
+            <div class="quickmap-showcase" data-aos="zoom-in">
+                <div class="qm-info">
+                    <div class="qm-logo-text mb-3">
+                        <i class="fa-solid fa-bolt text-lima"></i> <span class="font-skyrox text-white" style="font-size: 2rem;">Quick<span class="text-lima">Map</span></span>
+                    </div>
+                    <h3 class="font-gotham text-white mb-4">Cartografía automatizada al instante</h3>
+                    <p class="font-gotham text-white mb-4" style="line-height: 1.6; opacity: 0.9;">
+                        Olvídate de las horas invertidas configurando retículas, membretes y escalas. <strong>QuickMap</strong> es nuestra aplicación propietaria diseñada para generar mapas estandarizados listos para impresión o entrega en cuestión de segundos.
+                    </p>
+                    <ul class="qm-features font-gotham text-white mb-5">
+                        <li><i class="fa-solid fa-check text-lima"></i> Plantillas corporativas personalizables.</li>
+                        <li><i class="fa-solid fa-check text-lima"></i> Exportación por lotes en alta resolución.</li>
+                        <li><i class="fa-solid fa-check text-lima"></i> Conexión directa a tus capas vectoriales.</li>
+                    </ul>
+                    <a href="http://66.179.211.238:5000/" target="_blank" class="btn-geo alternate">
+                        PROBAR QUICKMAP <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+                    </a>
+                </div>
+                <div class="qm-visual">
+                    <div class="app-window">
+                        <div class="app-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <img src="img/app_sig/quickmap_panel.png" alt="Interfaz de QuickMap" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>

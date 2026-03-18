@@ -1,0 +1,195 @@
+// scss/pages/_agro.scss
+@use '../base/variables' as *;
+
+/* ==========================================================================
+   PÁGINA: AGRO ANÁLISIS
+   ========================================================================== */
+
+.page-agro {
+    // 1. Respetar el menú HUD a la izquierda
+    .main-content {
+        margin-left: 80px; 
+    }
+    
+    // 2. Ajuste del Hero
+    .hero-section {
+        margin-bottom: 60px;
+    }
+
+    // 3. Tag decorativo de "Tecnología Aplicada"
+    .tag-lima {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: $lima;
+        border: 1px solid $lima;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: $font-header;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+        &:hover {
+            background: rgba($lima, 0.1);
+            box-shadow: 0 0 10px rgba($lima, 0.3);
+        }
+    }
+}
+
+/* ==========================================================================
+   NUEVA REJILLA DE COMPARATIVA DE ÍNDICES (Xochimilco)
+   ========================================================================== */
+.agro-indices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 columnas perfectas
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.index-showcase-card {
+    background: rgba(255, 255, 255, 0.02); // Fondo de cristal súper sutil
+    border: 1px solid rgba($blanco, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    // Área visual del mapa
+    .map-visual {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba($blanco, 0.05);
+        height: 250px; // Altura fija para que los mapas se vean igual de grandes
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // La imagen se adapta al contenedor sin estirarse
+            transition: transform 0.5s ease;
+        }
+
+        // La etiqueta del índice (NDVI, etc.)
+        .index-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: $lima;
+            color: $azul-dark;
+            font-family: $font-header;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 6px 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba($lima, 0.5);
+            z-index: 2;
+
+            &.secondary { background: #00D1FF; color: $blanco; box-shadow: 0 0 10px rgba(#00D1FF, 0.5); } // Color para GNDVI
+            &.tertiary { background: #FFD600; color: $azul-dark; box-shadow: 0 0 10px rgba(#FFD600, 0.5); } // Color para NDRE
+        }
+    }
+
+    // Área de texto
+    .index-info {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .info-block {
+            .label-tech {
+                font-size: 0.75rem;
+                color: rgba($blanco, 0.5);
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+            p:not(.label-tech) {
+                font-size: 0.9rem;
+                line-height: 1.5;
+                color: rgba($blanco, 0.9);
+            }
+
+            // Resaltar el beneficio económico (ROI)
+            &.benefit {
+                margin-top: auto; // Empuja el beneficio al fondo de la tarjeta
+                padding-top: 15px;
+                border-top: 1px solid rgba($lima, 0.1);
+                
+                &.water { border-top-color: rgba(#00D1FF, 0.1); .text-lima { color: #00D1FF; } }
+                &.alarm { border-top-color: rgba(#FFD600, 0.1); .text-lima { color: #FFD600; } }
+
+                i { margin-right: 8px; font-size: 1rem; }
+            }
+        }
+    }
+
+    // Efecto Hover
+    &:hover {
+        transform: translateY(-10px);
+        background: rgba($lima, 0.05);
+        border-color: rgba($lima, 0.3);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 15px rgba($lima, 0.1);
+
+        .map-visual img {
+            transform: scale(1.05); // Zoom suave al mapa
+        }
+    }
+}
+
+// 4. RESPONSIVE UNIFICADO PARA AGRO
+@media (max-width: 992px) {
+    .page-agro {
+        .main-content {
+            margin-left: 60px !important; // Para el HUD delgado vertical
+        }
+    }
+}
+
+// Tablets y Celulares
+@media (max-width: 1024px) {
+    // La rejilla pasa de 3 columnas a 1 columna
+    .agro-indices-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .index-showcase-card {
+        flex-direction: row; // En tablets, el mapa a la izquierda y el texto a la derecha
+        height: auto;
+
+        .map-visual {
+            width: 250px;
+            height: auto;
+            border-bottom: none;
+            border-right: 1px solid rgba($blanco, 0.05);
+        }
+    }
+}
+
+// Solo celulares
+@media (max-width: 768px) {
+    .page-agro {
+        // En celular, que el texto de Agro se alinee a la izquierda (no justificado)
+        .project-case .project-info p {
+            text-align: left;
+        }
+    }
+
+    .index-showcase-card {
+        flex-direction: column; // En celular volvemos al diseño vertical
+
+        .map-visual {
+            width: 100%;
+            height: 200px;
+            border-right: none;
+            border-bottom: 1px solid rgba($blanco, 0.05);
+        }
+    }
+}

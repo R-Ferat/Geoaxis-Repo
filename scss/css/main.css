@@ -1213,4 +1213,322 @@ p, .footer-bottom {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+}
+/* ==========================================================================
+   PÁGINA: AGRO ANÁLISIS
+   ========================================================================== */
+.page-agro .main-content {
+  margin-left: 80px;
+}
+.page-agro .hero-section {
+  margin-bottom: 60px;
+}
+.page-agro .tag-lima {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #D4FF00;
+  border: 1px solid #D4FF00;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: "Skyrox", sans-serif;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+.page-agro .tag-lima:hover {
+  background: rgba(212, 255, 0, 0.1);
+  box-shadow: 0 0 10px rgba(212, 255, 0, 0.3);
+}
+
+/* ==========================================================================
+   NUEVA REJILLA DE COMPARATIVA DE ÍNDICES (Xochimilco)
+   ========================================================================== */
+.agro-indices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.index-showcase-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(245, 245, 241, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.index-showcase-card .map-visual {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(245, 245, 241, 0.05);
+  height: 250px;
+}
+.index-showcase-card .map-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.index-showcase-card .map-visual .index-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #D4FF00;
+  color: #0B132B;
+  font-family: "Skyrox", sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(212, 255, 0, 0.5);
+  z-index: 2;
+}
+.index-showcase-card .map-visual .index-badge.secondary {
+  background: #00D1FF;
+  color: #F5F5F1;
+  box-shadow: 0 0 10px rgba(0, 209, 255, 0.5);
+}
+.index-showcase-card .map-visual .index-badge.tertiary {
+  background: #FFD600;
+  color: #0B132B;
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.5);
+}
+.index-showcase-card .index-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.index-showcase-card .index-info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.index-showcase-card .index-info .info-block .label-tech {
+  font-size: 0.75rem;
+  color: rgba(245, 245, 241, 0.5);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.index-showcase-card .index-info .info-block p:not(.label-tech) {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(245, 245, 241, 0.9);
+}
+.index-showcase-card .index-info .info-block.benefit {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(212, 255, 0, 0.1);
+}
+.index-showcase-card .index-info .info-block.benefit.water {
+  border-top-color: rgba(0, 209, 255, 0.1);
+}
+.index-showcase-card .index-info .info-block.benefit.water .text-lima {
+  color: #00D1FF;
+}
+.index-showcase-card .index-info .info-block.benefit.alarm {
+  border-top-color: rgba(255, 214, 0, 0.1);
+}
+.index-showcase-card .index-info .info-block.benefit.alarm .text-lima {
+  color: #FFD600;
+}
+.index-showcase-card .index-info .info-block.benefit i {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+.index-showcase-card:hover {
+  transform: translateY(-10px);
+  background: rgba(212, 255, 0, 0.05);
+  border-color: rgba(212, 255, 0, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 15px rgba(212, 255, 0, 0.1);
+}
+.index-showcase-card:hover .map-visual img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  .page-agro .main-content {
+    margin-left: 60px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .agro-indices-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .index-showcase-card {
+    flex-direction: row;
+    height: auto;
+  }
+  .index-showcase-card .map-visual {
+    width: 250px;
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid rgba(245, 245, 241, 0.05);
+  }
+}
+@media (max-width: 768px) {
+  .page-agro .project-case .project-info p {
+    text-align: left;
+  }
+  .index-showcase-card {
+    flex-direction: column;
+  }
+  .index-showcase-card .map-visual {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 1px solid rgba(245, 245, 241, 0.05);
+  }
+}
+/* ==========================================================================
+   PÁGINA: APLICACIONES SIG & QUICKMAP
+   ========================================================================== */
+.page-sig .main-content {
+  margin-left: 80px;
+}
+.page-sig .hero-section {
+  margin-bottom: 60px;
+}
+.page-sig .tag-lima {
+  display: inline-block;
+  color: #D4FF00;
+  border: 1px solid #D4FF00;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-family: "Skyrox", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  background: rgba(212, 255, 0, 0.05);
+}
+
+/* ==========================================================================
+   SHOWCASE DE QUICKMAP (Exhibición de Software)
+   ========================================================================== */
+.quickmap-showcase {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(135deg, rgba(11, 19, 43, 0.9), rgba(11, 19, 43, 0.4));
+  border: 1px solid rgba(212, 255, 0, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+.quickmap-showcase::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(212, 255, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.quickmap-showcase .qm-info, .quickmap-showcase .qm-visual {
+  position: relative;
+  z-index: 1;
+}
+.quickmap-showcase .qm-info {
+  flex: 1;
+}
+.quickmap-showcase .qm-info .qm-features {
+  list-style: none;
+  padding: 0;
+}
+.quickmap-showcase .qm-info .qm-features li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+.quickmap-showcase .qm-info .qm-features li i {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+.quickmap-showcase .qm-info .btn-geo.alternate {
+  background: rgba(245, 245, 241, 0.05);
+  border-color: #D4FF00;
+  color: #D4FF00;
+}
+.quickmap-showcase .qm-info .btn-geo.alternate:hover {
+  background: #D4FF00;
+  color: #0B132B;
+  box-shadow: 0 0 20px rgba(212, 255, 0, 0.4);
+}
+.quickmap-showcase .qm-visual {
+  flex: 1;
+}
+.quickmap-showcase .qm-visual .app-window {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 255, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+.quickmap-showcase .qm-visual .app-window:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+.quickmap-showcase .qm-visual .app-window .app-header {
+  background: #2d2d2d;
+  padding: 10px 15px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.quickmap-showcase .qm-visual .app-window .app-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.quickmap-showcase .qm-visual .app-window .app-header .dot.red {
+  background: #ff5f56;
+}
+.quickmap-showcase .qm-visual .app-window .app-header .dot.yellow {
+  background: #ffbd2e;
+}
+.quickmap-showcase .qm-visual .app-window .app-header .dot.green {
+  background: #27c93f;
+}
+.quickmap-showcase .qm-visual .app-window img {
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+.quickmap-showcase .qm-visual .app-window img:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVE PARA SIG
+   ========================================================================== */
+@media (max-width: 992px) {
+  .page-sig .main-content {
+    margin-left: 60px !important;
+  }
+  .quickmap-showcase {
+    flex-direction: column;
+    padding: 40px 30px;
+    gap: 40px;
+  }
+  .quickmap-showcase .qm-visual .app-window {
+    transform: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .quickmap-showcase {
+    padding: 30px 20px;
+  }
+  .quickmap-showcase .qm-info .qm-logo-text span {
+    font-size: 1.6rem !important;
+  }
 }/*# sourceMappingURL=main.css.map */

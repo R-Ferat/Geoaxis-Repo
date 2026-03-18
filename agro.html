@@ -1,246 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Soluciones geoespaciales aplicadas al agro y ganadería en México.">
-  <meta name="keywords" content="geomática agro, agricultura de precisión, drones agrícolas, biomasa, conteo de cultivos, nivelación de terreno, forraje, asesoría digital">
-  <meta name="author" content="GeoMagia">
-  <title>GeoMagia - Agro</title>
-  
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="stylesheet" href="/css/agro.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoaxis | Agro Análisis</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
-<header class="header agro-header">
-  <div class="contenedor">
-    <div class="barra">
-       <h1 class="logo">
-                <a href="index.html" class="logo-link">Geo<span>Magia</span></a>
-            </h1>
-      <nav class="navegacion">
-        <a href="index.html">Inicio</a>
-        <a href="obras.html">Obras</a>
-        <a href="agro.html" class="activo">Agro</a>
-        <a href="sig.html">SIG</a>
-        <a href="blog2.html">Blog</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="cursos.html">Cursos</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </div>
-</header>
+<body class="page-agro">
 
-<div class="hero-servicios agro-hero" data-aos="fade-in">
-  <h1>Agricultura & Ganadería</h1>
-  <p>Geomática aplicada al campo para optimizar producción, recursos y decisiones</p>
-</div>
-
-<main class="contenedor servicios-detalle">
-  <section aria-label="Detalle de servicios agro">
-
-    <!-- Servicio 1 -->
-    <div class="servicio-detalle" data-aos="fade-right">
-      <div class="servicio-texto">
-        <h3>Mapeo con Dron</h3>
-        <p>Realizamos vuelos con drones multiespectrales para generar mapas de alta precisión, identificar zonas con estrés hídrico o nutricional y optimizar el manejo del cultivo.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Tecnologías:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-drone"></i>
-              <div>
-                <h5>Drones Multiespectrales</h5>
-                <p>Índices NDVI, SAVI y análisis de salud del cultivo</p>
-              </div>
-            </div>
-            <div class="caracteristica">
-              <i class="fas fa-map"></i>
-              <div>
-                <h5>Ortomosaicos</h5>
-                <p>Mapas detallados de parcelas y lotes</p>
-              </div>
-            </div>
-          </div>
+    <nav class="hud-menu">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/geoaxis/MONOGRAMA VERDE ELECTRICO.png" alt="Geoaxis Home" class="mini-logo">
+            </a>
         </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://elvuelodeldrone.com/wp-content/uploads/2022/11/DJI-Mavic-3M-cultivo.jpg');"></div>
-    </div>
+        <ul class="nav-links">
+            <li><a href="agro.html"><i class="fa-solid fa-seedling"></i> <span>AGRO ANÁLISIS</span></a></li>
+            <li><a href="nosotros.html"><i class="fa-solid fa-circle-info"></i> <span>NOSOTROS</span></a></li>
+            <li><a href="obras.html"><i class="fa-solid fa-microscope"></i> <span>TOPOGRAFÍA</span></a></li>
+            <li><a href="index.html#sig"><i class="fa-solid fa-map-location-dot"></i> <span>APLICACIONES SIG</span></a></li>
+            <li><a href="index.html#dron"><i class="fa-solid fa-helicopter"></i> <span>VIGILANCIA DRON</span></a></li>
+            <li><a href="index.html#blog"><i class="fa-solid fa-newspaper"></i> <span>BLOG GEOMÁTICA</span></a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-envelope-open-text"></i> <span>CONTACTO</span></a></li>
+        </ul>
 
-    <!-- Servicio 2 -->
-    <div class="servicio-detalle" data-aos="fade-left">
-      <div class="servicio-texto">
-        <h3>Cálculo de Biomasa</h3>
-        <p>Estimamos la cantidad de biomasa en cultivos y pastizales, apoyando en la toma de decisiones para fertilización, rendimiento y manejo sustentable.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Aplicaciones:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-leaf"></i>
-              <div>
-                <h5>Producción Agrícola</h5>
-                <p>Evaluación de rendimiento esperado</p>
-              </div>
+        <div class="hud-bottom">
+            <div class="hud-socials">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
-            <div class="caracteristica">
-              <i class="fas fa-seedling"></i>
-              <div>
-                <h5>Ganadería</h5>
-                <p>Estimación de alimento disponible en pastizales</p>
-              </div>
-            </div>
-          </div>
+            <a href="#" class="btn-portal">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>PORTAL DE DATOS</span>
+            </a>
         </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://www.czapp.com/wp-content/uploads/2024/05/fi.jpg');"></div>
-    </div>
+    </nav>
 
-    <!-- Servicio 3 -->
-    <div class="servicio-detalle" data-aos="fade-right">
-      <div class="servicio-texto">
-        <h3>Conteo de Cultivos</h3>
-        <p>Detectamos plantas individuales y áreas sin germinación, ayudando a productores a planificar resiembras y mejorar la densidad de cultivo.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Beneficios:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-calculator"></i>
-              <div>
-                <h5>Conteo Automático</h5>
-                <p>Algoritmos precisos para diferentes cultivos</p>
-              </div>
+    <main class="main-content">
+        
+        <header class="hero-section" style="background-image: linear-gradient(to right, rgba(11, 19, 43, 0.95) 15%, rgba(11, 19, 43, 0.4) 50%, transparent 100%), url('img/agro_img/mavic3M_1.jpg');">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="font-skyrox text-white">AGRICULTURA DE <br><span class="text-lima">PRECISIÓN</span></h1>
+                <p class="font-gotham text-white">Monitoreo inteligente de cultivos mediante sensores multiespectrales y drones. Detectamos anomalías antes de que sean visibles al ojo humano.</p>
+                <div class="hero-btns">
+                    <a href="#servicios-agro" class="btn-geo">VER SOLUCIONES</a>
+                </div>
             </div>
-            <div class="caracteristica">
-              <i class="fas fa-chart-area"></i>
-              <div>
-                <h5>Mapeo de Vacíos</h5>
-                <p>Detección de zonas sin germinación</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://images.squarespace-cdn.com/content/v1/521e95f4e4b01c5870ce81cf/1602189055629-8PD3NYPQUON2DB9SNEA1/geospatialCropCounting.jpg');"></div>
-    </div>
+        </header>
 
-    <!-- Servicio 4 -->
-    <div class="servicio-detalle" data-aos="fade-left">
-      <div class="servicio-texto">
-        <h3>Nivelación de Terreno</h3>
-        <p>Diseñamos y ejecutamos estudios de nivelación para mejorar la eficiencia del riego, reducir erosión y maximizar el aprovechamiento del agua en cada parcela.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Ventajas:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-water"></i>
-              <div>
-                <h5>Ahorro de Agua</h5>
-                <p>Distribución uniforme en riego</p>
-              </div>
+        <section class="container section-separator">
+            <div class="project-case" data-aos="fade-up">
+                <div class="project-info">
+                    <span class="tag-lima" style="display:inline-block; margin-bottom:10px; color:#D4FF00; border:1px solid #D4FF00; padding:5px 10px; border-radius:5px; font-family:'Skyrox'; font-size:0.8rem;">TECNOLOGÍA APLICADA</span>
+                    <h2 class="font-skyrox text-white mb-4">EL FUTURO DEL <span class="text-lima">CAMPO</span></h2>
+                    <p class="font-gotham text-white mb-4">Maximizamos el rendimiento de tus tierras minimizando los costos operativos. En Geoaxis utilizamos vehículos aéreos no tripulados (UAV) equipados con cámaras multiespectrales para escanear varias hectáreas en un solo vuelo.</p>
+                    <p class="font-gotham text-white mb-4">Esta radiografía agrícola nos permite generar mapas de prescripción exactos, optimizando el uso de fertilizantes, agua y pesticidas, llevando tu producción al siguiente nivel de rentabilidad y sustentabilidad.</p>
+                </div>
+                <div class="project-visual">
+                    <img src="img/agro_img/mavic3M_3.jpg" alt="Dron agrícola multiespectral" class="img-fluid shadow-neon">
+                </div>
             </div>
-            <div class="caracteristica">
-              <i class="fas fa-ruler-combined"></i>
-              <div>
-                <h5>Alta Precisión</h5>
-                <p>Topografía con RTK y modelos digitales</p>
-              </div>
+        </section>
+
+        <section id="servicios-agro" class="container section-separator mb-5">
+            <h2 class="font-skyrox text-center mb-5" data-aos="fade-up">ANÁLISIS <span class="text-lima">MULTIESPECTRAL</span></h2>
+            
+            <div class="entregables-grid">
+                <div class="entregable-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h4 class="font-skyrox text-white">Índices de Salud (NDVI)</h4>
+                    <p class="text-white font-gotham">Medimos el vigor de la biomasa para identificar zonas con deficiencias nutricionales o plagas en etapas tempranas.</p>
+                </div>
+                
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h4 class="font-skyrox text-white">Estrés Hídrico</h4>
+                    <p class="text-white font-gotham">Mapas térmicos que revelan la temperatura del follaje, permitiendo optimizar los sistemas de riego y detectar fugas.</p>
+                </div>
+
+                <div class="entregable-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="file-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h4 class="font-skyrox text-white">Conteo y Sobrevivencia</h4>
+                    <p class="text-white font-gotham">Algoritmos de IA para realizar inventarios exactos de plantas, árboles frutales y estimación de rendimiento de cosecha.</p>
+                </div>
             </div>
-          </div>
-        </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://lirp.cdn-website.com/a0dd16ff/dms3rep/multi/opt/tierras-baldias-1920w.webp');"></div>
-    </div>
+        </section>
 
-    <!-- Servicio 5 -->
-    <div class="servicio-detalle" data-aos="fade-right">
-      <div class="servicio-texto">
-        <h3>Estimación de Forraje</h3>
-        <p>Medimos la disponibilidad de forraje en pastizales para planear la carga animal y evitar sobrepastoreo, garantizando la sustentabilidad del campo.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Aplicaciones:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-cow"></i>
-              <div>
-                <h5>Manejo Ganadero</h5>
-                <p>Planificación de alimento disponible</p>
-              </div>
+        <section id="comparativa-indices" class="container section-separator mb-5">
+            <h2 class="font-skyrox text-center mb-4" data-aos="fade-up">RADIOGRAFÍA <span class="text-lima">DE PRECISIÓN</span></h2>
+            <p class="font-gotham text-center text-white mb-5 mx-auto" style="max-width: 700px; opacity: 0.8;" data-aos="fade-up" data-aos-delay="100">
+                A través de nuestros vuelos multiespectrales, GEOAXIS proporciona la ayuda especializada que necesitas para mejorar tus cultivos: haz más con menos, <strong class="text-lima">AHORRA AGUA</strong> y detecta problemas antes de que sea tarde.
+            </p>
+
+            <div class="agro-indices-grid">
+                
+                <div class="index-showcase-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="map-visual">
+                        <img src="img/agro_img/NDVI_MAPA_XOCH191125.png" alt="Mapa NDVI Xochimilco Geoaxis" class="img-fluid">
+                        <div class="index-badge">NDVI</div>
+                    </div>
+                    <div class="index-info">
+                        <h4 class="font-skyrox text-white">Vigor Vegetal</h4>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ ES?</p>
+                            <p class="text-white font-gotham">El índice más confiable. Mide la cantidad de biomasa verde y el vigor fotosintético de la planta.</p>
+                        </div>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ DETECTA?</p>
+                            <p class="text-white font-gotham">Zonas de alto vigor fotosintético vs. zonas con deficiencias nutricionales o ataques de plagas.</p>
+                        </div>
+                        <div class="info-block benefit">
+                            <p class="label-tech font-gotham">TU AHORRO (ROI)</p>
+                            <p class="text-lima font-gotham"><i class="fa-solid fa-scale-balanced"></i> Focaliza la aplicación de fertilizantes solo donde la planta lo necesita.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="index-showcase-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="map-visual">
+                        <img src="img/agro_img/GNDVI_A.png" alt="Mapa GNDVI Xochimilco Geoaxis" class="img-fluid">
+                        <div class="index-badge secondary">GNDVI</div>
+                    </div>
+                    <div class="index-info">
+                        <h4 class="font-skyrox text-white">Consumo de Nitrógeno</h4>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ ES?</p>
+                            <p class="text-white font-gotham">Similar al NDVI pero usa la banda verde. Es más sensible a los cambios en la clorofila cuando la planta está muy densa.</p>
+                        </div>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ DETECTA?</p>
+                            <p class="text-white font-gotham">Deficiencias tempranas de nitrógeno y madurez del cultivo.</p>
+                        </div>
+                        <div class="info-block benefit water">
+                            <p class="label-tech font-gotham">TU AHORRO (ROI)</p>
+                            <p class="text-lima font-gotham"><i class="fa-solid fa-droplet"></i> Optimiza el riego. Detecta estrés hídrico antes de que el NDVI lo vea.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="index-showcase-card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="map-visual">
+                        <img src="img/agro_img/ndre_A.png" alt="Mapa NDRE Xochimilco Geoaxis" class="img-fluid">
+                        <div class="index-badge tertiary">NDRE</div>
+                    </div>
+                    <div class="index-info">
+                        <h4 class="font-skyrox text-white">Zonas Críticas</h4>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ ES?</p>
+                            <p class="text-white font-gotham">Usa la banda "Red Edge" (el borde rojo) para penetrar más en el dosel de la planta y cultivos densos o de tallo alto.</p>
+                        </div>
+                        <div class="info-block">
+                            <p class="label-tech font-gotham">¿QUÉ DETECTA?</p>
+                            <p class="text-white font-gotham">Salud del cultivo en etapas críticas del ciclo de vida (cuando el NDVI se satura).</p>
+                        </div>
+                        <div class="info-block benefit alarm">
+                            <p class="label-tech font-gotham">TU AHORRO (ROI)</p>
+                            <p class="text-lima font-gotham"><i class="fa-solid fa-triangle-exclamation"></i> Detecta problemas en cultivos densos (como maíz) antes de que sea tarde.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="caracteristica">
-              <i class="fas fa-chart-line"></i>
-              <div>
-                <h5>Seguimiento Temporal</h5>
-                <p>Comparaciones entre ciclos de pastoreo</p>
-              </div>
+        </section>
+
+        <footer class="main-footer" id="contacto">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <img src="img/geoaxis/GEOAXIS LOGO BLANCO.png" alt="Geoaxis Logo" class="footer-logo">
+                    <p class="font-gotham">Líderes en tecnología geoespacial aplicada a la ingeniería y agricultura.</p>
+                </div>
+                <div class="footer-links font-gotham">
+                    <h4>NAVEGACIÓN</h4>
+                    <a href="#agro">Agro</a>
+                    <a href="#topografia">Topografía</a>
+                    <a href="#sig">Sistemas SIG</a>
+                </div>
+                <div class="footer-social">
+                    <h4>CONECTA</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/geoaxis_mx/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://a.storyblok.com/f/160385/071edb6901/vaca_come_pasto.jpg/m/?w=256&q=100');"></div>
-    </div>
-
-    <!-- Servicio 6 -->
-    <div class="servicio-detalle" data-aos="fade-left">
-      <div class="servicio-texto">
-        <h3>Asesoría Digital</h3>
-        <p>No solo entregamos mapas: acompañamos al productor con interpretación de datos y recomendaciones prácticas para mejorar el rendimiento y la gestión del campo.</p>
-        <div class="servicio-caracteristicas">
-          <h4>Incluye:</h4>
-          <div class="caracteristicas-grid">
-            <div class="caracteristica">
-              <i class="fas fa-laptop"></i>
-              <div>
-                <h5>Informes Claros</h5>
-                <p>Mapas y reportes fáciles de interpretar</p>
-              </div>
+            <div class="footer-bottom font-gotham">
+                <p>&copy; 2026 GEOAXIS | INNOVACIÓN CON PRECISIÓN</p>
             </div>
-            <div class="caracteristica">
-              <i class="fas fa-user-check"></i>
-              <div>
-                <h5>Acompañamiento</h5>
-                <p>Recomendaciones personalizadas y seguimiento</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="contacto.html" class="boton-primario">Solicitar servicio</a>
-      </div>
-      <div class="servicio-imagen" style="background-image: url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4?auto=format&fit=crop&w=900&q=80');"></div>
-    </div>
+        </footer>
 
-  </section>
-</main>
+    </main>
 
-<section class="cta-section agro-cta">
-  <div class="contenedor">
-    <h2>¿Quieres llevar tu campo al siguiente nivel?</h2>
-    <p>Descubre cómo la geomática potencia la productividad agrícola y ganadera</p>
-    <a href="contacto.html" class="boton-primario">Solicitar consulta</a>
-  </div>
-</section>
-
-<footer class="footer agro-footer">
-  <p>&copy; 2025 GeoMagia | Agro & Ganadería</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-    easing: 'ease-in-out'
-  });
-</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>

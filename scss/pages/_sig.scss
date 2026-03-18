@@ -1,0 +1,163 @@
+// scss/pages/_sig.scss
+@use '../base/variables' as *;
+
+/* ==========================================================================
+   PÁGINA: APLICACIONES SIG & QUICKMAP
+   ========================================================================== */
+
+.page-sig {
+    // 1. Respetar el menú HUD a la izquierda
+    .main-content {
+        margin-left: 80px; 
+    }
+    
+    // 2. Ajuste del Hero
+    .hero-section {
+        margin-bottom: 60px;
+    }
+
+    // Estilo del Tag verde reutilizable
+    .tag-lima {
+        display: inline-block;
+        color: $lima;
+        border: 1px solid $lima;
+        padding: 5px 12px;
+        border-radius: 5px;
+        font-family: $font-header;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        background: rgba($lima, 0.05);
+    }
+}
+
+/* ==========================================================================
+   SHOWCASE DE QUICKMAP (Exhibición de Software)
+   ========================================================================== */
+.quickmap-showcase {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(135deg, rgba($azul-dark, 0.9), rgba(11, 19, 43, 0.4));
+    border: 1px solid rgba($lima, 0.2);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.05);
+    position: relative;
+    overflow: hidden;
+
+    // Resplandor de fondo
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, rgba($lima, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .qm-info, .qm-visual {
+        position: relative;
+        z-index: 1;
+    }
+
+    .qm-info {
+        flex: 1;
+
+        .qm-features {
+            list-style: none;
+            padding: 0;
+            li {
+                margin-bottom: 12px;
+                font-size: 0.95rem;
+                display: flex;
+                align-items: center;
+                i { margin-right: 15px; font-size: 1.1rem; }
+            }
+        }
+
+        // Botón alternativo para QuickMap
+        .btn-geo.alternate {
+            background: rgba($blanco, 0.05);
+            border-color: $lima;
+            color: $lima;
+            &:hover {
+                background: $lima;
+                color: $azul-dark;
+                box-shadow: 0 0 20px rgba($lima, 0.4);
+            }
+        }
+    }
+
+    // Ventana falsa de aplicación para la captura de pantalla
+    .qm-visual {
+        flex: 1;
+
+        .app-window {
+            background: #1e1e1e;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 20px rgba($lima, 0.15);
+            transition: transform 0.4s ease;
+
+            &:hover {
+                transform: translateY(-10px) scale(1.02);
+            }
+
+            // Los 3 puntitos estilo Mac
+            .app-header {
+                background: #2d2d2d;
+                padding: 10px 15px;
+                display: flex;
+                gap: 8px;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+
+                .dot {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    &.red { background: #ff5f56; }
+                    &.yellow { background: #ffbd2e; }
+                    &.green { background: #27c93f; }
+                }
+            }
+
+            img {
+                width: 100%;
+                display: block;
+                opacity: 0.9;
+                transition: opacity 0.3s ease;
+                &:hover { opacity: 1; }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE PARA SIG
+   ========================================================================== */
+@media (max-width: 992px) {
+    .page-sig .main-content {
+        margin-left: 60px !important; // HUD delgado
+    }
+
+    .quickmap-showcase {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 40px;
+
+        .qm-visual .app-window {
+            transform: none !important; // Quitamos el hover agresivo en móvil
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .quickmap-showcase {
+        padding: 30px 20px;
+        .qm-info .qm-logo-text span { font-size: 1.6rem !important; }
+    }
+}
